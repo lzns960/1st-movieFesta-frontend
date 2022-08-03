@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 * {
@@ -23,14 +24,16 @@ a {
   font-family: "cloud";
   src: url(../font/MCKLW___.ttf) format("truetype");
 }
-div {
+body {
   width: 100%;
-  height: 100vh;
   position: relative;
   top: 0;
   left: 0;
+  background-color: #f5b5c7;
+  /* 왼쪽 페이지 */
+  /* 오른쪽 페이지 */
 }
-div .half {
+body .half {
   height: 100%;
   overflow: hidden;
   position: fixed;
@@ -40,84 +43,85 @@ div .half {
   z-index: 1;
   border-right: 1px solid #000;
 }
-div .half p {
+body .half p {
   position: absolute;
   font: 120px/1 "soul";
   top: 3vw;
   left: 2vw;
+  color: #D8FD12;
+  text-shadow: 2px 10px 20px rgba(85, 85, 85, 0.8);
 }
-div .half > img {
+body .half > img {
   position: absolute;
 }
-div .half .twingkle_effect1 {
+body .half .twingkle_effect1 {
   width: 300px;
   top: 23vw;
   left: 11vw;
 }
-div .half .twingkle_effect2 {
+body .half .twingkle_effect2 {
   width: 300px;
   top: 23vw;
   left: 26vw;
 }
-div .half .barbie_doll {
+body .half .barbie_doll {
   top: 15vw;
   left: 18vw;
 }
-div .half .dummies > img {
+body .half .dummies > img {
   position: absolute;
 }
-div .half .dummies > img:nth-of-type(1) {
+body .half .dummies > img:nth-of-type(1) {
   width: 110px;
   top: 10vw;
   left: 12vw;
   transform: rotate(35deg);
 }
-div .half .dummies > img:nth-of-type(2) {
+body .half .dummies > img:nth-of-type(2) {
   width: 90px;
   top: 12vw;
   left: 33vw;
   transform: rotate(-35deg);
 }
-div .half .dummies > img:nth-of-type(3) {
+body .half .dummies > img:nth-of-type(3) {
   width: 140px;
-  bottom: -10vw;
+  top: 40vw;
   left: 3vw;
   transform: rotate(-15deg);
 }
-div .half .dummies > img:nth-of-type(4) {
+body .half .dummies > img:nth-of-type(4) {
   width: 50px;
-  bottom: -1vw;
+  top: 45vw;
   left: 18vw;
   transform: rotate(-10deg);
 }
-div .half .dummies > img:nth-of-type(5) {
+body .half .dummies > img:nth-of-type(5) {
   width: 70px;
-  bottom: 0vw;
+  top: 45vw;
   left: 30vw;
   transform: rotate(10deg);
 }
-div .half .dummies > img:nth-of-type(6) {
+body .half .dummies > img:nth-of-type(6) {
   width: 115px;
-  bottom: -10vw;
+  top: 40vw;
   left: 36vw;
   transform: rotate(50deg);
 }
-div .half .barbie_text {
+body .half .barbie_text {
   top: 31vw;
   left: 14vw;
   width: 400px;
   transform: rotate(35deg);
 }
-div .half2 {
+body .half2 {
   position: absolute;
   width: 50%;
   top: 0;
   left: 50%;
-  height: 2000px;
-  background-color: #f5b5c7;
   overflow-x: hidden;
+  /* 오른쪽 페이지 헤더 */
 }
-div .half2 .common_header {
+body .half2 .common_header {
   position: relative;
   top: 0;
   width: 100%;
@@ -125,14 +129,14 @@ div .half2 .common_header {
   color: #000;
   border-bottom: 1px solid #c8c8c8;
 }
-div .half2 .common_header nav {
+body .half2 .common_header nav {
   padding: 3vw;
   display: flex;
   justify-content: space-between;
   position: relative;
   width: 100%;
 }
-div .half2 .common_header .main_nav {
+body .half2 .common_header .main_nav {
   width: 70%;
   padding: 0.7vh;
   display: flex;
@@ -141,10 +145,14 @@ div .half2 .common_header .main_nav {
   font: 30px/1 "Josefin Sans";
   cursor: pointer;
 }
-div .half2 .common_header .main_nav li:hover {
+body .half2 .common_header .main_nav li {
+  text-align: center;
+  flex-basis: 100px;
+}
+body .half2 .common_header .main_nav li:hover {
   font: bold 30px/1 "cloud";
 }
-div .half2 .common_header .sub_nav {
+body .half2 .common_header .sub_nav {
   width: 7vw;
   display: flex;
   justify-content: space-between;
@@ -153,24 +161,160 @@ div .half2 .common_header .sub_nav {
   box-sizing: border-box;
   cursor: pointer;
 }
-div .half2 .common_header .sub_nav span {
+body .half2 .common_header .sub_nav span {
   border: 1px solid black;
   border-radius: 10px;
   padding: 0.7vh;
   padding-top: 1vh;
 }
-div .half2 .common_header .sub_nav span:hover {
+body .half2 .common_header .sub_nav span:hover {
   background-color: #59bdf0;
   transition: 1.3s;
 }
-div .half2 .common_header .sub_nav .lang:hover {
+body .half2 .common_header .sub_nav .lang:hover {
   text-decoration: underline;
   font-style: italic;
 }
-div .half2 .coverPink {
-  width: 100vw;
+body .half2 .barbie_inner {
+  padding: 3vw;
+  /* 오른쪽 페이지__메인글씨 */
+  /* 오른쪽 페이지__드라이기 */
+  /* 오른쪽 페이지 등장인물 소개 */
 }
-div .half2 .coverPink .lineText {
-  transform: rotate(-2deg);
+body .half2 .barbie_inner .mainText {
+  width: 100%;
+  height: 30vw;
+  background-color: black;
+}
+body .half2 .barbie_inner > p {
+  font: bold 18px "NEXON Lv1 Gothic OTF";
+  text-align: center;
+}
+body .half2 .barbie_inner .dryer {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  background-color: #59bdf0;
+}
+body .half2 .barbie_inner .dryer > img {
+  width: 300px;
+}
+body .half2 .barbie_inner .dryer .dollars {
+  overflow-x: hidden;
+  height: 200px;
+}
+body .half2 .barbie_inner .dryer .dollars > img:nth-child(1) {
+  width: 200px;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: -15px;
+  right: 20px;
+}
+body .half2 .barbie_inner .dryer .dollars > img:nth-child(2) {
+  width: 100px;
+  transform: rotate(20deg);
+  position: absolute;
+  top: -15px;
+  right: 0px;
+}
+body .half2 .barbie_inner .dryer .dollars > img:nth-child(3) {
+  width: 150px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
+body .half2 .barbie_inner .role {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+body .half2 .barbie_inner .role .barbieRole {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .half2 .barbie_inner .role .barbieRole .barbieRoleImg {
+  height: 250px;
+  background-image: url(../img/barbie.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .barbie_inner .role .barbieRole > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+}
+body .half2 .barbie_inner .role .kenRole {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+}
+body .half2 .barbie_inner .role .kenRole .kenRoleImg {
+  height: 250px;
+  background-image: url(../img/ken.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .barbie_inner .role .kenRole > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+}
+body .half2 .barbie_inner .role .director {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+}
+body .half2 .barbie_inner .role .director .directorRoleImg {
+  height: 250px;
+  background-image: url(../img/GretaGerwig.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .barbie_inner .role .director > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+}
+body .half2 .barbie_inner .role .writer {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 30vw;
+}
+body .half2 .barbie_inner .role .writer .writerRoleImg {
+  height: 250px;
+  background-image: url(../img/NoahBaumbach.webp);
+  background-position-x: -135px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .barbie_inner .role .writer > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+}
+body .half2 .coverPink {
+  width: 100vw;
   background-color: #ff3796;
+  border: 1px solid #878787;
+}
+body .half2 .coverPink .lineText {
+  transform: rotate(-2deg);
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font: bold 15px/1 "Josefin Sans";
 }/*# sourceMappingURL=page1.css.map */

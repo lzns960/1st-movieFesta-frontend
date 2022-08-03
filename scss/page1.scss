@@ -16,15 +16,17 @@
 // font-family: 'Josefin Sans', sans-serif;
 
 // bg color
-// yellow #fce52b pink #f5b5c7 blue #59bdf0
+// yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12
 
-div {
+body {
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     position: relative;
     top: 0;
     left: 0;
+    background-color: #f5b5c7;
 
+    /* 왼쪽 페이지 */
     .half {
         height: 100%;
         overflow: hidden;
@@ -40,7 +42,8 @@ div {
             font: 120px/1 "soul";
             top: 3vw;
             left: 2vw;
-            
+            color: #D8FD12;
+            text-shadow: 2px 10px 20px rgba(85, 85, 85, 0.8);
         }
         >img {
             position: absolute;
@@ -76,25 +79,25 @@ div {
         }
         .dummies>img:nth-of-type(3) {
             width: 140px;
-            bottom:-10vw;
+            top:40vw;
             left: 3vw;
             transform: rotate(-15deg);
         }
         .dummies>img:nth-of-type(4) {
             width: 50px;
-            bottom:-1vw;
+            top:45vw;
             left: 18vw;
             transform: rotate(-10deg);
         }
         .dummies>img:nth-of-type(5) {
             width: 70px;
-            bottom: 0vw;
+            top:45vw;
             left: 30vw;
             transform: rotate(10deg);
         }
         .dummies>img:nth-of-type(6) {
             width: 115px;
-            bottom: -10vw;
+            top:40vw;
             left: 36vw;
             transform: rotate(50deg);
         }
@@ -106,15 +109,17 @@ div {
         }
     }
 
+    /* 오른쪽 페이지 */
     .half2 {
         position: absolute;
         width: 50%;
         top: 0;
         left: 50%;
-        height: 2000px;
-        background-color: #f5b5c7;
+        // background-color: #f5b5c7;
 
         overflow-x: hidden;
+
+        /* 오른쪽 페이지 헤더 */
         .common_header {
             position: relative;
             top: 0;
@@ -139,8 +144,12 @@ div {
                 align-items: center;
                 font: 30px/1 'Josefin Sans';
                 cursor: pointer;
+
+                li {
+                    text-align: center;
+                    flex-basis: 100px;
+                }
             }
-        
             .main_nav li:hover {
                 font: bold 30px/1 "cloud";
             }
@@ -174,13 +183,169 @@ div {
                 
             }
         }
+        .barbie_inner {
+            padding: 3vw;
+            
+            /* 오른쪽 페이지__메인글씨 */
+            .mainText{
+                width: 100%;
+                height: 30vw;
+                background-color: black;
+            }
+            >p {
+                font: bold 18px 'NEXON Lv1 Gothic OTF';
+                text-align: center;
+            }
+
+            /* 오른쪽 페이지__드라이기 */
+            .dryer {
+                position: relative;
+                width: 100%;
+                height: 50vw;
+                background-color: #59bdf0;
+
+                >img {
+                    width: 300px;
+                }
+
+                .dollars {
+                    overflow-x: hidden;
+                    height: 200px;
+                    >img:nth-child(1){
+                        width: 200px;
+                        transform: rotate(-20deg);
+                        position: absolute;
+                        top: -15px;
+                        right: 20px;
+                    }
+
+                    >img:nth-child(2){
+                        width: 100px;
+                        transform: rotate(20deg);
+                        position: absolute;
+                        top: -15px;
+                        right: 0px;
+                    }
+
+                    >img:nth-child(3){
+                        width: 150px;
+                        transform: rotate(30deg);
+                        position: absolute;
+                        top: 50px;
+                        right: 0px;
+                    }
+                }
+            }
+
+            /* 오른쪽 페이지 등장인물 소개 */
+            .role {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+                
+
+                .barbieRole {
+                    width: 13vw;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    .barbieRoleImg {
+                        height: 250px;
+                        background-image: url(../img/barbie.jpg);
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 50%;
+                        border: 5px solid #59bdf0 ;                  
+                    }
+                    >span {
+                        color: #fff;
+                        font-weight: bold ;
+                        text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+                    }
+                }
+                .kenRole {
+                    width: 13vw;
+                    position: absolute;
+                    top: 0;
+                    left: 10vw;
+
+                    .kenRoleImg {
+                        height: 250px;
+                        background-image: url(../img/ken.jpg);
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 50%;
+                        border: 5px solid #59bdf0 ;      
+                    }
+                    >span {
+                        color: #fff;
+                        font-weight: bold ;
+                        text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+                    }
+                }
+
+                .director {
+                    width: 13vw;
+                    position: absolute;
+                    top: 0;
+                    left: 20vw;
+
+                    .directorRoleImg {
+                        height: 250px;
+                        background-image: url(../img/GretaGerwig.jpg);
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 50%;
+                        border: 5px solid #59bdf0 ;             
+                    }
+                    >span {
+                        color: #fff;
+                        font-weight: bold ;
+                        text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+                    }
+                }
+                
+                .writer {
+                    width: 13vw;
+                    position: absolute;
+                    top: 0;
+                    left: 30vw;
+
+                    .writerRoleImg {
+                        height: 250px;
+                        background-image: url(../img/NoahBaumbach.webp);
+                        background-position-x: -135px;
+                        background-size: cover;
+                        border-radius: 50%;
+                        border: 5px solid #59bdf0;             
+                    }
+                    >span {
+                        color: #fff;
+                        font-weight: bold ;
+                        text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+                    }
+                }
+            }
+            
+        }
+
+
         .coverPink {
             width: 100vw;
+            background-color: #ff3796;
+            border: 1px solid #878787;
 
             .lineText {
                 transform: rotate(-2deg);
-                background-color: #ff3796;
+                color:#fff;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font: bold 15px/1 'Josefin Sans';
             }
         }
+
     }
 }
+

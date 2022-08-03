@@ -32,9 +32,4 @@ function animate() {
     window.requestAnimationFrame(animate)
 }
 
-function scrollHandler() {
-    count1 += 15
-}
-
-window.addEventListener('scroll', scrollHandler)
 animate()
