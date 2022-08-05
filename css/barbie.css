@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* RESET */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -34,100 +35,97 @@ body {
   /* 오른쪽 페이지 */
 }
 body .half {
+  width: calc(50% + 1px);
   height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: calc(50% + 1px);
-  background-color: #59bdf0;
   z-index: 1;
+  background-color: #59bdf0;
   border-right: 1px solid #000;
 }
 body .half p {
   position: absolute;
-  font: 120px/1 "soul";
+  font: 7.5rem/1 "soul";
   top: 3vw;
   left: 2vw;
   color: #D8FD12;
-  text-shadow: 2px 10px 20px rgba(85, 85, 85, 0.8);
+  text-shadow: 0.2rem 0.5rem 1rem rgba(85, 85, 85, 0.8);
 }
-body .half > img {
+body .half img {
   position: absolute;
 }
 body .half .twingkle_effect1 {
-  width: 300px;
-  top: 23vw;
-  left: 11vw;
+  width: 20vw;
+  top: 25vw;
+  left: 8vw;
 }
 body .half .twingkle_effect2 {
-  width: 300px;
-  top: 23vw;
-  left: 26vw;
+  width: 20vw;
+  top: 25vw;
+  left: 25vw;
 }
 body .half .barbie_doll {
-  top: 15vw;
-  left: 18vw;
-}
-body .half .dummies > img {
-  position: absolute;
+  top: 18vw;
+  left: 17vw;
 }
 body .half .dummies > img:nth-of-type(1) {
-  width: 110px;
-  top: 10vw;
-  left: 12vw;
+  width: 7vw;
+  top: 11vw;
+  left: 11vw;
   transform: rotate(35deg);
 }
 body .half .dummies > img:nth-of-type(2) {
-  width: 90px;
+  width: 6vw;
   top: 12vw;
   left: 33vw;
   transform: rotate(-35deg);
 }
 body .half .dummies > img:nth-of-type(3) {
-  width: 140px;
+  width: 8vw;
   top: 40vw;
   left: 3vw;
   transform: rotate(-15deg);
 }
 body .half .dummies > img:nth-of-type(4) {
   width: 50px;
-  top: 45vw;
+  top: 48vw;
   left: 18vw;
   transform: rotate(-10deg);
 }
 body .half .dummies > img:nth-of-type(5) {
-  width: 70px;
+  width: 4vw;
   top: 45vw;
   left: 30vw;
   transform: rotate(10deg);
 }
 body .half .dummies > img:nth-of-type(6) {
-  width: 115px;
-  top: 40vw;
-  left: 36vw;
+  width: 7vw;
+  top: 46vw;
+  left: 35vw;
   transform: rotate(50deg);
 }
 body .half .barbie_text {
-  top: 31vw;
+  top: 38vw;
   left: 14vw;
-  width: 400px;
+  width: 20vw;
   transform: rotate(35deg);
 }
 body .half2 {
-  position: absolute;
+  position: relative;
   width: 50%;
   top: 0;
   left: 50%;
-  overflow-x: hidden;
+  overflow: hidden;
   /* 오른쪽 페이지 헤더 */
+  /* 오른쪽 페이지 줄거리 소개 */
+  /* 마퀴 텍스트 효과 */
 }
 body .half2 .common_header {
-  position: relative;
   top: 0;
   width: 100%;
   height: 15vh;
   color: #000;
-  border-bottom: 1px solid #c8c8c8;
 }
 body .half2 .common_header nav {
   padding: 3vw;
@@ -175,6 +173,17 @@ body .half2 .common_header .sub_nav .lang:hover {
   text-decoration: underline;
   font-style: italic;
 }
+body .half2 .common_header .coverGreen {
+  top: 0;
+  width: 100vw;
+  background-color: #D8FD12;
+  border: 1px solid #878787;
+  padding: 1rem;
+}
+body .half2 .common_header .coverGreen .lineText5 {
+  color: #ff3796;
+  font: italic bold 1rem/1 "Playfair Display";
+}
 body .half2 .barbie_inner {
   padding: 3vw;
   /* 오른쪽 페이지__메인글씨 */
@@ -187,7 +196,7 @@ body .half2 .barbie_inner .mainText {
   background-color: black;
 }
 body .half2 .barbie_inner > p {
-  font: bold 18px "NEXON Lv1 Gothic OTF";
+  font: bold 1.2rem "NEXON Lv1 Gothic OTF";
   text-align: center;
 }
 body .half2 .barbie_inner .dryer {
@@ -224,10 +233,20 @@ body .half2 .barbie_inner .dryer .dollars > img:nth-child(3) {
   top: 50px;
   right: 0px;
 }
+body .half2 .barbie_inner > h2 {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  position: relative;
+  top: 5vw;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+}
 body .half2 .barbie_inner .role {
   width: 100%;
+  height: 30vh;
   position: relative;
-  top: 0;
+  top: 6vw;
   left: 0;
 }
 body .half2 .barbie_inner .role .barbieRole {
@@ -306,15 +325,69 @@ body .half2 .barbie_inner .role .writer > span {
   font-weight: bold;
   text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
 }
-body .half2 .coverPink {
+body .half2 .barbieStory {
+  background-color: rgb(255, 255, 220);
+  position: relative;
+  top: 5vw;
+}
+body .half2 .barbieStory .bgCandy {
+  background-image: url(../img/bgCandy.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  opacity: 0.5;
+}
+body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo {
+  z-index: 3;
+}
+body .half2 .coverPink1 {
   width: 100vw;
   background-color: #ff3796;
   border: 1px solid #878787;
+  padding: 1rem;
+  transform: rotate(355deg);
+  position: absolute;
+  left: -1vw;
 }
-body .half2 .coverPink .lineText {
-  transform: rotate(-2deg);
+body .half2 .coverPink1 .lineText1 {
   color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font: bold 15px/1 "Josefin Sans";
-}/*# sourceMappingURL=page1.css.map */
+  font: bold 1rem/1 "Playfair Display";
+  letter-spacing: 0.15rem;
+  display: flex;
+  font-style: italic;
+}
+body .half2 .coverPink2 {
+  width: 100vw;
+  background-color: #ff3796;
+  border: 1px solid #878787;
+  display: flex;
+  padding: 1rem;
+  transform: rotate(5deg);
+  position: absolute;
+  left: -30vw;
+}
+body .half2 .coverPink2 .lineText2 {
+  color: #fff;
+  font: bold 1rem/1 "Playfair Display";
+  letter-spacing: 0.15rem;
+  justify-content: flex-end;
+  font-style: italic;
+}
+body .half2 .coverGreen {
+  width: 100vw;
+  background-color: #D8FD12;
+  border: 1px solid #878787;
+  padding: 1rem;
+  position: relative;
+  top: 5vw;
+  z-index: 1;
+}
+body .half2 .coverGreen .lineText3 {
+  color: #ff3796;
+  font: bold 1rem/1 "Playfair Display";
+  font-style: italic;
+}
+body .half2 .coverGreen .lineText4 {
+  color: #ff3796;
+  font: bold 1rem/1 "Playfair Display";
+  font-style: italic;
+}/*# sourceMappingURL=barbie.css.map */
