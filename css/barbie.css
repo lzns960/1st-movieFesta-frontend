@@ -257,7 +257,7 @@ body .half2 .barbie_inner .role .barbieRole {
 }
 body .half2 .barbie_inner .role .barbieRole .barbieRoleImg {
   height: 250px;
-  background-image: url(../img/barbie.jpg);
+  background-image: url(../img/castBarbie.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -276,7 +276,7 @@ body .half2 .barbie_inner .role .kenRole {
 }
 body .half2 .barbie_inner .role .kenRole .kenRoleImg {
   height: 250px;
-  background-image: url(../img/ken.jpg);
+  background-image: url(../img/castKen.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -295,7 +295,7 @@ body .half2 .barbie_inner .role .director {
 }
 body .half2 .barbie_inner .role .director .directorRoleImg {
   height: 250px;
-  background-image: url(../img/GretaGerwig.jpg);
+  background-image: url(../img/castGretaGerwig.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -314,7 +314,7 @@ body .half2 .barbie_inner .role .writer {
 }
 body .half2 .barbie_inner .role .writer .writerRoleImg {
   height: 250px;
-  background-image: url(../img/NoahBaumbach.webp);
+  background-image: url(../img/castNoahBaumbach.webp);
   background-position-x: -135px;
   background-size: cover;
   border-radius: 50%;
