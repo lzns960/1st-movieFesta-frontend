@@ -332,12 +332,27 @@ body .half2 .barbieStory {
 }
 body .half2 .barbieStory .bgCandy {
   background-image: url(../img/bgCandy.jpg);
-  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
-  opacity: 0.5;
+  background-repeat: no-repeat;
+}
+body .half2 .barbieStory .bgCandy .barbie_inner > img {
+  width: 35vw;
+  position: relative;
+  top: 50%;
+  left: 15%;
+  z-index: 1;
 }
 body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo {
-  z-index: 3;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo .barbieNoise {
+  background-image: url(../img/barbieNoise.gif);
+}
+body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo .barbieNoise > img {
+  opacity: 0.9;
 }
 body .half2 .coverPink1 {
   width: 100vw;
