@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFesta</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/hotel.css">
+    <!-- js -->
+    <script defer src="./js/hotel.js"></script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- 왼쪽 페이지 -->
+    <div class="half">
+        <p>Movie Festa</p>
+    </div>
+    
+    <!-- 오른쪽 페이지 -->
+    <div class="half2">
+        <!-- 오른쪽 페이지 헤더 -->
+            <header class="common_header">
+                <nav>
+                    <ul class="main_nav">
+                        <li>HOME</li>
+                        <li>2022</li>
+                        <li>2021</li>
+                        <li>NEWS</li>
+                    </ul>
+                    <ul class="sub_nav">
+                        <li class="lang">EN</li>
+                        <li><span>Ticket</span></li>
+                    </ul>
+                </nav>
+                <div class="coverPurple">
+                    <p class="lineText1"></p>
+                </div>
+            </header>
+
+            <!-- 오른쪽 페이지__메인 글씨 -->
+            <section class="hotel_inner">
+                <h2 class="mainText text" contenteditable="true">
+                    THE</br>
+                    Grand </br>
+                    Budapest</br>
+                    Hotel
+                </h2>
+                <p>사실은 말입니다. 바비영화는 2023년에 나온답니다. <br>
+                    영화소개를 어떻게해야할지 정말 걱정이 됩니다만, 기대해주십쇼.<br>
+                    한 세줄 정도는 써놔야 뭔가 있어보여서 조금 더 써봤습니다.</p>
+            </section>
+
+            <!-- 오른쪽 페이지__호텔입장 -->
+            <section class="hotel_inner">
+                <div class="hotelMiddle">
+                    <div class="hotelStaff"></div>
+                    <img class="hotelDoor" src="./img/doorEffect.svg" alt="문그림자">
+                </div>
+            </section>
+
+            <!-- 오른쪽 페이지__등장인물소개 -->
+            <section class="hotel_inner">
+                <h2>Cast</h2>
+                <div class="role">
+                    <div class="barbieRole">
+                        <div class = barbieRoleImg></div>
+                        <span>Barbie</span>
+                        <p>Margot Robbie</p>
+                    </div>
+                    <div class="kenRole">
+                        <div class = kenRoleImg></div>
+                        <span>Ken</span>
+                        <p>Ryan Gosling</p>
+                    </div>
+                    <div class="director">
+                        <div class = directorRoleImg></div>
+                        <span>Director</span>
+                        <p>Greta Gerwing</p>
+                    </div>
+                    <div class="writer">
+                        <div class = writerRoleImg></div>
+                        <span>Writer</span>
+                        <p>Noah Baumbach</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 오른쪽 페이지__짧은 줄거리 -->
+            <div class="barbieStory bgCandy">
+                <section class="barbie_inner">
+                    <img class = "year2000" src="./img/2000.svg" alt="2000년도">
+                    <div class="barbieImg">
+                        <img src="./img/barbieVideo1.gif" alt="바비_비디오1">
+                        <img src="./img/barbieVideo2.gif" alt="바비_비디오2">
+                        <img src="./img/barbieImg1.jpg" alt="바비인형_사진1">
+                        <img src="./img/barbieVideo3.gif" alt="바비_비디오3">
+                        <img src="./img/barbieVideo4.gif" alt="바비_비디오4">
+                        <img src="./img/barbieVideo5.gif" alt="바비_비디오5">
+                    </div>
+                </section>
+            </div>
+            <div class="coverPurple">
+                <p class="lineText2"></p>
+            </div>
+    </div>
+</body>
+</html>

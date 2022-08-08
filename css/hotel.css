@@ -1,0 +1,449 @@
+@charset "UTF-8";
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FONT */
+@font-face {
+  font-family: "soul";
+  src: url(../font/soul-handwriting_free-version.ttf) format("truetype");
+}
+@font-face {
+  font-family: "cloud";
+  src: url(../font/MCKLW___.ttf) format("truetype");
+}
+@font-face {
+  font-family: "cloudBK";
+  src: url(../font/MCKLB___.ttf) format("truetype");
+}
+@font-face {
+  font-family: "archer";
+  src: url(../font/ArcherSemiboldPro.otf) format("truetype");
+}
+body {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 235, 245);
+  /* 왼쪽 페이지 */
+  /* 오른쪽 페이지 */
+}
+body .half {
+  width: calc(50% + 1px);
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-image: url(../img/hotelDayNight.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 1px solid #000;
+}
+body .half p {
+  position: absolute;
+  font: 7.5rem/1 "soul";
+  top: 3vw;
+  left: 2vw;
+  color: #fff292;
+  text-shadow: 0.2rem 0.5rem 1rem rgba(158, 107, 52, 0.7725490196);
+}
+body .half2 {
+  position: relative;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  overflow-x: hidden;
+  /* 오른쪽 페이지 헤더 */
+  /* 오른쪽 페이지 줄거리 소개 */
+  /* 마퀴 텍스트 효과 */
+}
+body .half2 .common_header {
+  top: 0;
+  width: 100%;
+  height: 15vh;
+  color: #000;
+}
+body .half2 .common_header nav {
+  padding: 3vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+body .half2 .common_header .main_nav {
+  width: 70%;
+  padding: 0.7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 30px/1 "archer";
+  cursor: pointer;
+}
+body .half2 .common_header .main_nav li {
+  text-align: center;
+  flex-basis: 100px;
+}
+body .half2 .common_header .main_nav li:hover {
+  font: 30px/1 "cloud";
+  transform: scale(1.5);
+  font-weight: 500;
+}
+body .half2 .common_header .sub_nav {
+  width: 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 20px/1 "archer";
+  box-sizing: border-box;
+  cursor: pointer;
+}
+body .half2 .common_header .sub_nav span {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.7vh;
+  padding-top: 1vh;
+}
+body .half2 .common_header .sub_nav span:hover {
+  background-color: #f5b5c7;
+  transition: 1.3s;
+}
+body .half2 .common_header .sub_nav .lang:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
+body .half2 .common_header .coverPurple {
+  top: 0;
+  width: 100vw;
+  background-color: purple;
+  border: 1px solid #878787;
+  padding: 1rem;
+}
+body .half2 .common_header .coverPurple .lineText1 {
+  color: plum;
+  font: italic bold 1.2rem/1 "archer";
+}
+body .half2 .hotel_inner {
+  padding: 3vw;
+  /* 오른쪽 페이지__메인글씨 */
+  /* 오른쪽 페이지__드라이기 */
+  /* 오른쪽 페이지 등장인물 소개 */
+}
+body .half2 .hotel_inner:nth-child(1) {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+body .half2 .hotel_inner .mainText {
+  margin-top: 2vw;
+  width: 100%;
+  height: 20vw;
+  font: 5rem/1 "archer";
+  text-align: center;
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  -webkit-animation: netflix_style 3.5s infinite;
+          animation: netflix_style 3.5s infinite;
+  outline: none;
+  white-space: nowrap;
+  letter-spacing: -0.4rem;
+}
+body .half2 .hotel_inner > p {
+  margin-top: 10vw;
+  font: bold 1.2rem "NEXON Lv1 Gothic OTF";
+  text-align: center;
+}
+body .half2 .hotel_inner .hotelMiddle {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+body .half2 .hotel_inner .hotelMiddle .hotelStaff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-image: url(../img/hotelStaff.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body .half2 .hotel_inner .hotelMiddle .hotelDoor {
+  position: absolute;
+  top: 0;
+  left: -7vw;
+  width: 130%;
+}
+body .half2 .hotel_inner > h2 {
+  margin: 5vw 0 2vw 0;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+  top: 5vw;
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+}
+body .half2 .hotel_inner .role {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  top: 6vw;
+  left: 0;
+  margin-bottom: 5vw;
+}
+body .half2 .hotel_inner .role .barbieRole {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .half2 .hotel_inner .role .barbieRole .barbieRoleImg {
+  height: 250px;
+  background-image: url(../img/castBarbie.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .hotel_inner .role .barbieRole > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+}
+body .half2 .hotel_inner .role .kenRole {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+}
+body .half2 .hotel_inner .role .kenRole .kenRoleImg {
+  height: 250px;
+  background-image: url(../img/castKen.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .hotel_inner .role .kenRole > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+}
+body .half2 .hotel_inner .role .director {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+}
+body .half2 .hotel_inner .role .director .directorRoleImg {
+  height: 250px;
+  background-image: url(../img/castGretaGerwig.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .hotel_inner .role .director > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+}
+body .half2 .hotel_inner .role .writer {
+  width: 13vw;
+  position: absolute;
+  top: 0;
+  left: 30vw;
+}
+body .half2 .hotel_inner .role .writer .writerRoleImg {
+  height: 250px;
+  background-image: url(../img/castNoahBaumbach.webp);
+  background-position-x: -135px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #59bdf0;
+}
+body .half2 .hotel_inner .role .writer > span {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+}
+body .half2 .barbieStory {
+  position: relative;
+  top: 5vw;
+  width: 100%;
+  height: 125vh;
+  background-image: url(../img/bgCandy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .half2 .barbieStory .year2000 {
+  width: 35vw;
+  position: absolute;
+  left: 15%;
+}
+body .half2 .barbieStory .barbieImg {
+  top: 0;
+  left: 0;
+}
+body .half2 .barbieStory .barbieImg > img {
+  position: absolute;
+  top: 2vw;
+  left: 3vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(1) {
+  width: 15vw;
+  left: 15vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(2) {
+  width: 15vw;
+  left: 33vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(3) {
+  width: 30vw;
+  top: 20vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(4) {
+  width: 15vw;
+  top: 30vw;
+  left: 28vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(5) {
+  width: 15vw;
+  height: 10vw;
+  top: 50vw;
+  left: 20vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(6) {
+  width: 15vw;
+  height: 10vw;
+  top: 50vw;
+}
+body .half2 .coverPink1 {
+  width: 100vw;
+  background-color: #ff3796;
+  border: 1px solid #878787;
+  padding: 1rem;
+  transform: rotate(355deg);
+  position: absolute;
+  left: -1vw;
+}
+body .half2 .coverPink1 .lineText1 {
+  color: #fff;
+  font: bold 1rem/1 "Playfair Display";
+  letter-spacing: 0.15rem;
+  display: flex;
+  font-style: italic;
+}
+body .half2 .coverPink2 {
+  width: 100vw;
+  background-color: #ff3796;
+  border: 1px solid #878787;
+  display: flex;
+  padding: 1rem;
+  transform: rotate(5deg);
+  position: absolute;
+  left: -30vw;
+}
+body .half2 .coverPink2 .lineText2 {
+  color: #fff;
+  font: bold 1rem/1 "Playfair Display";
+  letter-spacing: 0.15rem;
+  justify-content: flex-end;
+  font-style: italic;
+}
+body .half2 .coverPurple {
+  width: 100vw;
+  background-color: purple;
+  border: 1px solid #878787;
+  padding: 1rem;
+  position: relative;
+  top: 5vw;
+  z-index: 1;
+}
+body .half2 .coverPurple .lineText2 {
+  color: plum;
+  font: italic bold 1.2rem/1 "archer";
+}
+
+@-webkit-keyframes netflix_style {
+  0% {
+    text-shadow: 0px 0px transparent, 1px 1px #aaa, 2px 2px #aaa, 3px 3px #aaa, 4px 4px #aaa, 5px 5px #aaa, 6px 6px #aaa, 7px 7px #aaa, 8px 8px #aaa, 9px 9px #aaa, 10px 10px #aaa, 11px 11px #aaa, 12px 12px #aaa, 13px 13px #aaa, 14px 14px #aaa, 15px 15px #aaa, 16px 16px #aaa, 17px 17px #aaa, 18px 18px #aaa, 19px 19px #aaa, 20px 20px #aaa, 21px 21px #aaa, 22px 22px #aaa, 23px 23px #aaa, 24px 24px #aaa, 25px 25px #aaa, 26px 26px #aaa, 27px 27px #aaa, 28px 28px #aaa, 29px 29px #aaa, 30px 30px #aaa, 31px 31px #aaa, 32px 32px #aaa, 33px 33px #aaa, 34px 34px #aaa, 35px 35px #aaa, 36px 36px #aaa, 37px 37px #aaa, 38px 38px #aaa, 39px 39px #aaa, 40px 40px #aaa, 41px 41px #aaa, 42px 42px #aaa, 43px 43px #aaa, 44px 44px #aaa, 45px 45px #aaa, 46px 46px #aaa, 47px 47px #aaa, 48px 48px #aaa, 49px 49px #aaa, 50px 50px #aaa;
+    color: #f3f3f3;
+    transform: scale(1.5, 1.5);
+  }
+  10% {
+    text-shadow: 0px 0px transparent, 1px 1.5px #aaa, 2px 3px #aaa, 3px 4.5px #aaa, 4px 6px #aaa, 5px 7.5px #aaa, 6px 9px #aaa, 7px 10.5px #aaa, 8px 12px #aaa, 9px 13.5px #aaa, 10px 15px #aaa, 11px 16.5px #aaa, 12px 18px #aaa, 13px 19.5px #aaa, 14px 21px #aaa, 15px 22.5px #aaa, 16px 24px #aaa, 17px 25.5px #aaa, 18px 27px #aaa, 19px 28.5px #aaa, 20px 30px #aaa, 21px 31.5px #aaa, 22px 33px #aaa, 23px 34.5px #aaa, 24px 36px #aaa, 25px 37.5px #aaa, 26px 39px #aaa, 27px 40.5px #aaa, 28px 42px #aaa, 29px 43.5px #aaa, 30px 45px #aaa, 31px 46.5px #aaa, 32px 48px #aaa, 33px 49.5px #aaa, 34px 51px #aaa, 35px 52.5px #aaa, 36px 54px #aaa, 37px 55.5px #aaa, 38px 57px #aaa, 39px 58.5px #aaa, 40px 60px #aaa, 41px 61.5px #aaa, 42px 63px #aaa, 43px 64.5px #aaa, 44px 66px #aaa, 45px 67.5px #aaa, 46px 69px #aaa, 47px 70.5px #aaa, 48px 72px #aaa, 49px 73.5px #aaa, 50px 75px #aaa;
+    color: #f3f3f3;
+    transform: scale(1.5, 1.5);
+  }
+  15% {
+    color: #f3f3f3;
+  }
+  20% {
+    color: #756480;
+    text-shadow: none;
+    transform: scale(1.1, 1.1);
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    color: #d2b5d5;
+    transform: scale(0.85, 0.9);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes netflix_style {
+  0% {
+    text-shadow: 0px 0px transparent, 1px 1px #aaa, 2px 2px #aaa, 3px 3px #aaa, 4px 4px #aaa, 5px 5px #aaa, 6px 6px #aaa, 7px 7px #aaa, 8px 8px #aaa, 9px 9px #aaa, 10px 10px #aaa, 11px 11px #aaa, 12px 12px #aaa, 13px 13px #aaa, 14px 14px #aaa, 15px 15px #aaa, 16px 16px #aaa, 17px 17px #aaa, 18px 18px #aaa, 19px 19px #aaa, 20px 20px #aaa, 21px 21px #aaa, 22px 22px #aaa, 23px 23px #aaa, 24px 24px #aaa, 25px 25px #aaa, 26px 26px #aaa, 27px 27px #aaa, 28px 28px #aaa, 29px 29px #aaa, 30px 30px #aaa, 31px 31px #aaa, 32px 32px #aaa, 33px 33px #aaa, 34px 34px #aaa, 35px 35px #aaa, 36px 36px #aaa, 37px 37px #aaa, 38px 38px #aaa, 39px 39px #aaa, 40px 40px #aaa, 41px 41px #aaa, 42px 42px #aaa, 43px 43px #aaa, 44px 44px #aaa, 45px 45px #aaa, 46px 46px #aaa, 47px 47px #aaa, 48px 48px #aaa, 49px 49px #aaa, 50px 50px #aaa;
+    color: #f3f3f3;
+    transform: scale(1.5, 1.5);
+  }
+  10% {
+    text-shadow: 0px 0px transparent, 1px 1.5px #aaa, 2px 3px #aaa, 3px 4.5px #aaa, 4px 6px #aaa, 5px 7.5px #aaa, 6px 9px #aaa, 7px 10.5px #aaa, 8px 12px #aaa, 9px 13.5px #aaa, 10px 15px #aaa, 11px 16.5px #aaa, 12px 18px #aaa, 13px 19.5px #aaa, 14px 21px #aaa, 15px 22.5px #aaa, 16px 24px #aaa, 17px 25.5px #aaa, 18px 27px #aaa, 19px 28.5px #aaa, 20px 30px #aaa, 21px 31.5px #aaa, 22px 33px #aaa, 23px 34.5px #aaa, 24px 36px #aaa, 25px 37.5px #aaa, 26px 39px #aaa, 27px 40.5px #aaa, 28px 42px #aaa, 29px 43.5px #aaa, 30px 45px #aaa, 31px 46.5px #aaa, 32px 48px #aaa, 33px 49.5px #aaa, 34px 51px #aaa, 35px 52.5px #aaa, 36px 54px #aaa, 37px 55.5px #aaa, 38px 57px #aaa, 39px 58.5px #aaa, 40px 60px #aaa, 41px 61.5px #aaa, 42px 63px #aaa, 43px 64.5px #aaa, 44px 66px #aaa, 45px 67.5px #aaa, 46px 69px #aaa, 47px 70.5px #aaa, 48px 72px #aaa, 49px 73.5px #aaa, 50px 75px #aaa;
+    color: #f3f3f3;
+    transform: scale(1.5, 1.5);
+  }
+  15% {
+    color: #f3f3f3;
+  }
+  20% {
+    color: #756480;
+    text-shadow: none;
+    transform: scale(1.1, 1.1);
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    color: #d2b5d5;
+    transform: scale(0.85, 0.9);
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=hotel.css.map */

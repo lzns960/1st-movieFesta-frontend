@@ -15,29 +15,24 @@
     font-family: "cloudBK";
     src: url(../font/MCKLB___.ttf) format("truetype");
 }
+@font-face {
+    font-family: "archer";
+    src: url(../font/ArcherSemiboldPro.otf) format("truetype");
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 // font-family: 'Josefin Sans', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 // font-family: 'Playfair Display', serif;
 
-// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12
-
-:root {
-    --color-primary: rgb(255, 235, 245);
-    --color-secondary: rgb(247, 199, 223);
-    --color-tertiary: rgb(249, 151, 200);
-    --color-quaternary: rgb(248, 127, 187);
-    --color-quinary: hotpink;
-}
+// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12 red #59bdf0 yello #FCE52B
 
 body {
     width: 100%;
     position: relative;
     top: 0;
     left: 0;
-    background-color: #f5b5c7;
-
+    background-color: rgb(255, 235, 245) ;
 
     /* 왼쪽 페이지 */
     .half {
@@ -47,7 +42,10 @@ body {
         position: fixed;
         top: 0;
         z-index: 1;
-        background-color: #59bdf0;
+        background-image: url(../img/hotelDayNight.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border-right: 1px solid #000;
 
         p {
@@ -55,67 +53,8 @@ body {
             font: 7.5rem/1 "soul";
             top: 3vw;
             left: 2vw;
-            color: #D8FD12;
-            text-shadow: 0.2rem 0.5rem 1rem rgba(85, 85, 85, 0.8);
-        }
-        img {
-            position: absolute;
-        }
-        .twingkle_effect1 {
-            width: 20vw;
-            top: 25vw;
-            left: 8vw;
-        }
-        .twingkle_effect2 {
-            width: 20vw;
-            top: 25vw;
-            left: 23vw;
-        }
-        .barbie_doll{
-            top: 18vw;
-            left: 17vw;
-        }
-        .dummies>img:nth-of-type(1) {
-            width: 7vw;
-            top: 11vw;
-            left: 11vw;
-            transform: rotate(35deg);
-        }
-        .dummies>img:nth-of-type(2) {
-            width: 6vw;
-            top: 12vw;
-            left: 33vw;
-            transform: rotate(-35deg);
-        }
-        .dummies>img:nth-of-type(3) {
-            width: 8vw;
-            top: 40vw;
-            left: 3vw;
-            transform: rotate(-15deg);
-        }
-        .dummies>img:nth-of-type(4) {
-            width: 50px;
-            top: 44vw;
-            left: 18vw;
-            transform: rotate(-10deg);
-        }
-        .dummies>img:nth-of-type(5) {
-            width: 4vw;
-            top:44vw;
-            left: 30vw;
-            transform: rotate(10deg);
-        }
-        .dummies>img:nth-of-type(6) {
-            width: 7vw;
-            top: 40vw;
-            left: 35vw;
-            transform: rotate(50deg);
-        }
-        .barbie_text{
-            top: 35vw;
-            left: 14vw;
-            width: 20vw;
-            transform: rotate(35deg)
+            color:#fff292;
+            text-shadow: 0.2rem 0.5rem 1rem #9e6b34c5;
         }
     }
 
@@ -125,7 +64,7 @@ body {
         width: 50%;
         top: 0;
         left: 50%;
-        overflow: hidden;
+        overflow-x: hidden;
 
         /* 오른쪽 페이지 헤더 */
         .common_header {
@@ -148,7 +87,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font: 30px/1 'Josefin Sans';
+                font: 30px/1 "archer";
                 cursor: pointer;
 
                 li {
@@ -167,7 +106,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font: 20px/1 'Josefin Sans';
+                font: 20px/1 "archer";
                 box-sizing: border-box;
                 cursor: pointer;
             
@@ -179,7 +118,7 @@ body {
                 }
         
                 span:hover {
-                    background-color: #59bdf0;
+                    background-color: #f5b5c7;
                     transition: 1.3s;
                 }
         
@@ -189,22 +128,22 @@ body {
                 }
             }
 
-            .coverGreen {
+            .coverPurple {
                 top: 0;
                 width: 100vw;
-                background-color: #D8FD12;
+                background-color: purple;
                 border: 1px solid #878787;
                 padding: 1rem;
     
-                .lineText5 {
-                    color:#ff3796;
-                    font: italic bold 1rem/1 'Playfair Display';
+                .lineText1 {
+                    color:plum;
+                    font: italic bold 1.2rem/1 "archer";
                 }
             }
         }
 
 
-        .barbie_inner {
+        .hotel_inner {
             padding: 3vw;
 
             /* 오른쪽 페이지__메인글씨 */
@@ -216,153 +155,60 @@ body {
             .mainText{
                 margin-top: 2vw;
                 width: 100%;
-                height: 30vw;
-                font: 15rem/1 "cloudBK";
+                height: 20vw;
+                font: 5rem/1 "archer";
                 text-align: center;
                 text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
                 text-transform: uppercase;
                 color: var(--color-primary);
-                animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+                animation: netflix_style 3.5s infinite;
+                outline: none;
+                white-space: nowrap;
                 letter-spacing: -0.4rem;
             }
             >p {
-                margin-top: 7vw;
+                margin-top: 10vw;
                 font: bold 1.2rem 'NEXON Lv1 Gothic OTF';
                 text-align: center;
             }
 
-            /* 오른쪽 페이지__드라이기 */
-            .dryer {
+            .hotelMiddle {
                 position: relative;
+                top: 0;
+                left:0;
                 width: 100%;
-                height: 50vw;
+                height: 100vh;
 
-                & img {
+
+                .hotelStaff {
                     position: absolute;
-                }
+                    top: 0;
+                    left:0;
+                    width: 100%;
+                    height: 60vh;
+                    background-image: url(../img/hotelStaff.gif);
+                    background-position:center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    // background-image: url(../img/hotelStaff.gif);
+                    // background-position:center;
+                    // background-repeat: no-repeat;
+                    // background-size: contain;
 
-                >img {
-                    width: 18vw;
-                    top: -2vw;
-                    left: -13vw;
-                    transform: rotate(40deg);
                 }
-
-                .dollars {
-                    height: 10vw;
-                    >img:nth-child(1){
-                        width: 13vw;
-                        top: 5vw;
-                        left: 15vw;
-                        transform: rotate(-10deg);
-                    }
-                    >img:nth-child(2){
-                        width: 12vw;
-                        top: 12vw;
-                        left: 12vw;
-                        transform: rotate(-10deg);
-                    }
-                    >img:nth-child(3){
-                        width: 14vw;
-                        top: 10vw;
-                        left: 20vw;
-                        transform: rotate(10deg);
-                    }
-                    >img:nth-child(4){
-                        width: 12vw;
-                        top: 18vw;
-                        left: 10vw;
-                        transform: rotate(0deg);
-                    }
-                    >img:nth-child(5){
-                        width: 13vw;
-                        top: 22vw;
-                        left: 6vw;
-                        transform: rotate(25deg);
-                    }
-                    >img:nth-child(6){
-                        width: 12vw;
-                        top: 20vw;
-                        left: 25vw;
-                        transform: rotate(90deg);
-                    }
-                    >img:nth-child(7){
-                        width: 11vw;
-                        top: 27vw;
-                        left: 20vw;
-                        transform: rotate(-20deg);
-                    }
-                    >img:nth-child(8){
-                        width: 14vw;
-                        top: 30vw;
-                        left: 10vw;
-                        transform: rotate(40deg);
-                    }
-                    >img:nth-child(9){
-                        width: 13vw;
-                        top: 8vw;
-                        left: 30vw;
-                        transform: rotate(0deg);
-                    }
-                    >img:nth-child(10){
-                        width: 12vw;
-                        top: 20vw;
-                        left: 34vw;
-                        transform: rotate(10deg);
-                    }
-                    >img:nth-child(11){
-                        width: 10vw;
-                        top: 30vw;
-                        left: 32vw;
-                        transform: rotate(-5deg);
-                    }
-                    >img:nth-child(12){
-                        width: 13vw;
-                        top: 40vw;
-                        left: 26vw;
-                        transform: rotate(5deg);
-                    }
-                    >img:nth-child(13){
-                        width: 13vw;
-                        top: 40vw;
-                        left: 10vw;
-                        transform: rotate(15deg);
-                    }
-                }
-
-                .wind {
+                .hotelDoor {
                     position: absolute;
+                    top: 0;
+                    left: -7vw;
+                    width: 130%;
+                    
+                    // transform-origin: center center;
+                    // animation: door  15s infinite;
+                }
 
-                    >img:nth-child(1){
-                        width: 7vw;
-                        top: -10vw;
-                        left: 15vw;
-                }
-                    >img:nth-child(2){
-                        width: 3vw;
-                        top: 6vw;
-                        left: 2vw;
-                }
-                    >img:nth-child(3){
-                        width: 4vw;
-                        top: 22vw;
-                        left: 5vw;
-                        transform: rotate(10deg);
-                }
-                    >img:nth-child(4){
-                        width: 3vw;
-                        top: 1vw;
-                        left: 8vw;
-                        transform: rotate(40deg);
-                }
-                    >img:nth-child(5){
-                        width: 5vw;
-                        top: -7vw;
-                        left: 35vw;
-                        transform: rotate(-40deg);
-                }
             }
-        }
+            /* 오른쪽 페이지__드라이기 */
+            
             /* 오른쪽 페이지 등장인물 소개 */
             >h2 {
                 margin: 5vw 0 2vw 0;
@@ -562,100 +408,60 @@ body {
                 font-style:italic;
             }
         }
-        .coverGreen {
+        .coverPurple {
             width: 100vw;
-            background-color: #D8FD12;
+            background-color: purple;
             border: 1px solid #878787;
             padding: 1rem;
             position: relative;
             top: 5vw;
             z-index: 1;
 
-            .lineText3 {
-                color:#ff3796;
-                font: bold 1rem/1 'Playfair Display';
-                font-style:italic;
-            }
-        }
-        .coverGreen4 {
-            width: 100vw;
-            background-color: #D8FD12;
-            border: 1px solid #878787;
-            padding: 1rem;
-            position: relative;
-            top: 0vw;
-            z-index: 1;
-
-            .lineText4 {
-                color:#ff3796;;
-                font: bold 1rem/1 'Playfair Display';
-                font-style:italic;
+            .lineText2 {
+                color:plum;
+                font: italic bold 1.2rem/1 "archer";
             }
         }
     }
 }
 
-@keyframes shadows {
+@function makelongshadow($length,$angle) {
+    $val: 0px 0px transparent;
+    @for $i from 1 through $length {
+        $val: #{$val}, #{$i}px #{$i*$angle}px #aaa;
+    }
+    @return $val;
+    }
+
+@keyframes netflix_style {
     0% {
-        text-shadow: none;
+        text-shadow: makelongshadow(50,1);
+        color:#f3f3f3;
+        transform: scale(1.5, 1.5);
     }
     10% {
-        text-shadow: 3px 3px 0 var(--color-secondary);
+        text-shadow: makelongshadow(50,1.5);
+        color:#f3f3f3;
+        transform: scale(1.5, 1.5);
     }
-    20% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary);
+    15% {
+        color:#f3f3f3;
     }
-    30% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    20% {    
+        color:#756480;
+        text-shadow: none;
+        transform: scale(1.1, 1.1);
     }
-    40% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-        12px 12px 0 var(--color-quinary);
-    }
-    50% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-        12px 12px 0 var(--color-quinary);
-    }
-    60% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-        12px 12px 0 var(--color-quinary);
-    }
-    70% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    75% {
+        opacity: 1;
     }
     80% {
-      text-shadow: 3px 3px 0 var(--color-secondary),
-        6px 6px 0 var(--color-tertiary);
+        opacity: 0;    
+        color:#d2b5d5;
+        transform: scale(0.85, 0.9);
     }
-    90% {
-      text-shadow: 3px 3px 0 var(--color-secondary);
-    }
+    
     100% {
-      text-shadow: none;
+        opacity: 0;
     }
-  }
-  
-  @keyframes move {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    40% {
-      transform: translate(-12px, -12px);
-    }
-    50% {
-      transform: translate(-12px, -12px);
-    }
-    60% {
-      transform: translate(-12px, -12px);
-    }
-    100% {
-      transform: translate(0px, 0px);
-    }
-  }
-  
+}
