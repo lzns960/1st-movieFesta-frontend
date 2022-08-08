@@ -63,7 +63,7 @@ body .half .twingkle_effect1 {
 body .half .twingkle_effect2 {
   width: 20vw;
   top: 25vw;
-  left: 25vw;
+  left: 23vw;
 }
 body .half .barbie_doll {
   top: 18vw;
@@ -89,24 +89,24 @@ body .half .dummies > img:nth-of-type(3) {
 }
 body .half .dummies > img:nth-of-type(4) {
   width: 50px;
-  top: 48vw;
+  top: 44vw;
   left: 18vw;
   transform: rotate(-10deg);
 }
 body .half .dummies > img:nth-of-type(5) {
   width: 4vw;
-  top: 45vw;
+  top: 44vw;
   left: 30vw;
   transform: rotate(10deg);
 }
 body .half .dummies > img:nth-of-type(6) {
   width: 7vw;
-  top: 46vw;
+  top: 40vw;
   left: 35vw;
   transform: rotate(50deg);
 }
 body .half .barbie_text {
-  top: 38vw;
+  top: 35vw;
   left: 14vw;
   width: 20vw;
   transform: rotate(35deg);
@@ -116,7 +116,7 @@ body .half2 {
   width: 50%;
   top: 0;
   left: 50%;
-  overflow: hidden;
+  overflow-x: hidden;
   /* 오른쪽 페이지 헤더 */
   /* 오른쪽 페이지 줄거리 소개 */
   /* 마퀴 텍스트 효과 */
@@ -148,7 +148,9 @@ body .half2 .common_header .main_nav li {
   flex-basis: 100px;
 }
 body .half2 .common_header .main_nav li:hover {
-  font: bold 30px/1 "cloud";
+  font: 30px/1 "cloud";
+  transform: scale(1.5);
+  font-weight: 500;
 }
 body .half2 .common_header .sub_nav {
   width: 7vw;
@@ -193,7 +195,9 @@ body .half2 .barbie_inner {
 body .half2 .barbie_inner .mainText {
   width: 100%;
   height: 30vw;
-  background-color: black;
+  font: 17rem/1 "cloud";
+  letter-spacing: -1rem;
+  text-align: center;
 }
 body .half2 .barbie_inner > p {
   font: bold 1.2rem "NEXON Lv1 Gothic OTF";
@@ -235,12 +239,11 @@ body .half2 .barbie_inner .dryer .dollars > img:nth-child(3) {
 }
 body .half2 .barbie_inner > h2 {
   color: #fff;
-  font-weight: bold;
-  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  font-weight: 900;
   position: relative;
   top: 5vw;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 99;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
 }
 body .half2 .barbie_inner .role {
   width: 100%;
@@ -266,7 +269,7 @@ body .half2 .barbie_inner .role .barbieRole .barbieRoleImg {
 body .half2 .barbie_inner .role .barbieRole > span {
   color: #fff;
   font-weight: bold;
-  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
 }
 body .half2 .barbie_inner .role .kenRole {
   width: 13vw;
@@ -285,7 +288,7 @@ body .half2 .barbie_inner .role .kenRole .kenRoleImg {
 body .half2 .barbie_inner .role .kenRole > span {
   color: #fff;
   font-weight: bold;
-  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
 }
 body .half2 .barbie_inner .role .director {
   width: 13vw;
@@ -304,7 +307,7 @@ body .half2 .barbie_inner .role .director .directorRoleImg {
 body .half2 .barbie_inner .role .director > span {
   color: #fff;
   font-weight: bold;
-  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
 }
 body .half2 .barbie_inner .role .writer {
   width: 13vw;
@@ -323,36 +326,58 @@ body .half2 .barbie_inner .role .writer .writerRoleImg {
 body .half2 .barbie_inner .role .writer > span {
   color: #fff;
   font-weight: bold;
-  text-shadow: -1px 0 #ff3796, 0 2px #ff3796, 2px 0 #ff3796, 0 -1px #ff3796;
+  text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796, 0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
 }
 body .half2 .barbieStory {
-  background-color: rgb(255, 255, 220);
   position: relative;
   top: 5vw;
-}
-body .half2 .barbieStory .bgCandy {
+  width: 100%;
+  height: 125vh;
   background-image: url(../img/bgCandy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-body .half2 .barbieStory .bgCandy .barbie_inner > img {
+body .half2 .barbieStory .year2000 {
   width: 35vw;
-  position: relative;
-  top: 50%;
-  left: 15%;
-  z-index: 1;
-}
-body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo {
-  z-index: 2;
   position: absolute;
+  left: 15%;
+}
+body .half2 .barbieStory .barbieImg {
   top: 0;
   left: 0;
 }
-body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo .barbieNoise {
-  background-image: url(../img/barbieNoise.gif);
+body .half2 .barbieStory .barbieImg > img {
+  position: absolute;
+  top: 2vw;
+  left: 3vw;
 }
-body .half2 .barbieStory .bgCandy .barbie_inner .barbieVideo .barbieNoise > img {
-  opacity: 0.9;
+body .half2 .barbieStory .barbieImg img:nth-of-type(1) {
+  width: 15vw;
+  left: 15vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(2) {
+  width: 15vw;
+  left: 33vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(3) {
+  width: 30vw;
+  top: 20vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(4) {
+  width: 15vw;
+  top: 30vw;
+  left: 28vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(5) {
+  width: 15vw;
+  height: 10vw;
+  top: 50vw;
+  left: 20vw;
+}
+body .half2 .barbieStory .barbieImg img:nth-of-type(6) {
+  width: 15vw;
+  height: 10vw;
+  top: 50vw;
 }
 body .half2 .coverPink1 {
   width: 100vw;
