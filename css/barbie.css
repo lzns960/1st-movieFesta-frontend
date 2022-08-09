@@ -223,9 +223,14 @@ body .half2 .barbie_inner .mainText {
   letter-spacing: -0.4rem;
 }
 body .half2 .barbie_inner > p {
-  margin-top: 7vw;
-  font: bold 1.2rem "NEXON Lv1 Gothic OTF";
+  font: bold 1.1rem "NEXON Lv1 Gothic OTF";
   text-align: center;
+}
+body .half2 .barbie_inner > p:nth-of-type(1) {
+  margin-top: 6vw;
+}
+body .half2 .barbie_inner > p:nth-of-type(2) {
+  color: #f5b5c7;
 }
 body .half2 .barbie_inner .dryer {
   position: relative;
@@ -369,6 +374,19 @@ body .half2 .barbie_inner .role {
   top: 6vw;
   left: 0;
   margin-bottom: 5vw;
+  /* 스크롤 애니메이션 */
+  /* 아래에서 위로 페이드 인 */
+}
+body .half2 .barbie_inner .role .sa {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+body .half2 .barbie_inner .role .sa-up {
+  transform: translate(0, 100px);
+}
+body .half2 .barbie_inner .role .sa.show {
+  opacity: 1;
+  transform: none;
 }
 body .half2 .barbie_inner .role .barbieRole {
   width: 13vw;

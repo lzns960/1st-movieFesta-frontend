@@ -147,27 +147,20 @@ body {
             padding: 3vw;
 
             /* 오른쪽 페이지__메인글씨 */
-            &:nth-child(1) {
-                display: flex;
-                align-content: center;
-                justify-content: center;
-            }
             .mainText{
-                margin-top: 2vw;
+                margin-top: 3vw;
                 width: 100%;
-                height: 20vw;
-                font: 5rem/1 "archer";
+                font: 4rem/1 "archer";
                 text-align: center;
-                text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-                text-transform: uppercase;
-                color: var(--color-primary);
-                animation: netflix_style 3.5s infinite;
-                outline: none;
-                white-space: nowrap;
                 letter-spacing: -0.4rem;
+                -webkit-animation: text-flicker-out-glow 2.5s linear infinite both;
+                animation: text-flicker-out-glow 2.5s linear infinite both;
+                color: rgb(255, 255, 255);
+                font: 150px/1 'TeXGyreAdventorBold';
+                text-transform: none;        
             }
             >p {
-                margin-top: 10vw;
+                margin-top: 8vw;
                 font: bold 1.2rem 'NEXON Lv1 Gothic OTF';
                 text-align: center;
             }
@@ -201,267 +194,328 @@ body {
                     top: 0;
                     left: -7vw;
                     width: 130%;
-                    
-                    // transform-origin: center center;
-                    // animation: door  15s infinite;
                 }
 
             }
-            /* 오른쪽 페이지__드라이기 */
-            
-            /* 오른쪽 페이지 등장인물 소개 */
-            >h2 {
-                margin: 5vw 0 2vw 0;
-                color: #fff;
-                font-weight:900 ;
+
+            /* 오른쪽 페이지 줄거리 소개 */
+            .scrollArtice {
+                padding-top: 50vw;
+
+                &.scrollArticle0 {
+                    
+                    h1{
+                    font-size: 4rem;
+                    text-align: center;}
+
+                    .welcomeMessage {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 3em;
+                        font-size:2.5rem;
+                        margin: 5px 0;
+
+                        & p {
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 1.2;
+                        }
+                    }
+                    .stickyElem{
+                        display: none;
+                        position:fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+                .midMessage {
+                    padding: 0 1rem;
+                    font-size: 2rem;
+                    color: #888;
+
+                    & strong {
+                        color: black;
+                    }
+                }
+            }
+
+
+            /* 마퀴 텍스트 효과 */
+            .coverPurple {
+                width: 100vw;
+                background-color: purple;
+                border: 1px solid #878787;
+                padding: 1rem;
                 position: relative;
                 top: 5vw;
-                background-color: #0000;
-                text-shadow:0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
-            }
-            .role {
-                width: 100%;
-                height: 30vh;
-                position: relative;
-                top: 6vw;
-                left: 0;
-                margin-bottom: 5vw;
-                
+                z-index: 1;
 
-                .barbieRole {
-                    width: 13vw;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-
-                    .barbieRoleImg {
-                        height: 250px;
-                        background-image: url(../img/castBarbie.jpg);
-                        background-position: center;
-                        background-size: cover;
-                        border-radius: 50%;
-                        border: 5px solid #59bdf0 ;                  
-                    }
-                    >span {
-                        color: #fff;
-                        font-weight: bold ;
-                        text-shadow:0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
-                    }
+                .lineText2 {
+                    color:plum;
+                    font: italic bold 1.2rem/1 "archer";
                 }
-                .kenRole {
-                    width: 13vw;
-                    position: absolute;
-                    top: 0;
-                    left: 10vw;
-
-                    .kenRoleImg {
-                        height: 250px;
-                        background-image: url(../img/castKen.jpg);
-                        background-position: center;
-                        background-size: cover;
-                        border-radius: 50%;
-                        border: 5px solid #59bdf0 ;      
-                    }
-                    >span {
-                        color: #fff;
-                        font-weight: bold ;
-                        text-shadow:0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
-                    }
-                }
-
-                .director {
-                    width: 13vw;
-                    position: absolute;
-                    top: 0;
-                    left: 20vw;
-
-                    .directorRoleImg {
-                        height: 250px;
-                        background-image: url(../img/castGretaGerwig.jpg);
-                        background-position: center;
-                        background-size: cover;
-                        border-radius: 50%;
-                        border: 5px solid #59bdf0 ;             
-                    }
-                    >span {
-                        color: #fff;
-                        font-weight: bold ;
-                        text-shadow:0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
-                    }
-                }
-                
-                .writer {
-                    width: 13vw;
-                    position: absolute;
-                    top: 0;
-                    left: 30vw;
-
-                    .writerRoleImg {
-                        height: 250px;
-                        background-image: url(../img/castNoahBaumbach.webp);
-                        background-position-x: -135px;
-                        background-size: cover;
-                        border-radius: 50%;
-                        border: 5px solid #59bdf0;             
-                    }
-                    >span {
-                        color: #fff;
-                        font-weight: bold ;
-                        text-shadow:0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
-                    }
-                }
-            }
-            
-        }
-
-        
-        /* 오른쪽 페이지 줄거리 소개 */
-        .barbieStory {
-            position: relative;
-            top: 5vw;
-            width: 100%;
-            height: 125vh;
-            background-image: url(../img/bgCandy.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            .year2000 {
-                width: 35vw;
-                position: absolute;
-                left: 15%;
-            }
-
-            .barbieImg {
-                top: 0;
-                    left: 0;
-
-                >img {
-                    position: absolute;
-                    top: 2vw;
-                    left: 3vw;
-                }
-                img:nth-of-type(1) {
-                    width: 15vw;
-                    left: 15vw;
-                }
-                img:nth-of-type(2) {
-                    width: 15vw;
-                    left: 33vw;
-                }
-                img:nth-of-type(3) {
-                    width: 30vw;
-                    top: 20vw;
-                }
-                img:nth-of-type(4) {
-                    width: 15vw;
-                    top: 30vw;
-                    left: 28vw;
-                }
-                img:nth-of-type(5) {
-                    width: 15vw;
-                    height: 10vw;
-                    top: 50vw;
-                    left: 20vw;
-                }
-                img:nth-of-type(6) {
-                    width: 15vw;
-                    height: 10vw;
-                    top: 50vw;
-                }
-            }
-        }
-
-        /* 마퀴 텍스트 효과 */
-        .coverPink1 {
-            width: 100vw;
-            background-color: #ff3796;
-            border: 1px solid #878787;
-            // display: flex;
-            padding: 1rem;
-            transform: rotate(355deg);
-            position: absolute;
-            left: -1vw;
-
-            .lineText1 {
-                color:#fff;
-                font: bold 1rem/1 'Playfair Display';
-                letter-spacing: 0.15rem;
-                display: flex;
-                font-style:italic;
-            }
-        }
-        .coverPink2 {
-                width: 100vw;
-                background-color: #ff3796;
-                border: 1px solid #878787;
-                display: flex;
-                padding: 1rem;
-                transform: rotate(5deg);
-                position: absolute;
-                left: -30vw;
-
-            .lineText2 {
-                color:#fff;
-                font: bold 1rem/1 'Playfair Display';
-                letter-spacing: 0.15rem;
-                justify-content: flex-end;
-                font-style:italic;
-            }
-        }
-        .coverPurple {
-            width: 100vw;
-            background-color: purple;
-            border: 1px solid #878787;
-            padding: 1rem;
-            position: relative;
-            top: 5vw;
-            z-index: 1;
-
-            .lineText2 {
-                color:plum;
-                font: italic bold 1.2rem/1 "archer";
             }
         }
     }
 }
 
-@function makelongshadow($length,$angle) {
-    $val: 0px 0px transparent;
-    @for $i from 1 through $length {
-        $val: #{$val}, #{$i}px #{$i*$angle}px #aaa;
-    }
-    @return $val;
-    }
+#showScene0 #scrollArticle0 .stickyElem,
+#showScene1 #scrollArticle1 .stickyElem,
+#showScene2 #scrollArticle1 .stickyElem,
+#showScene3 #scrollArticle3 .stickyElem {
+    display: block;
+}
 
-@keyframes netflix_style {
+@-webkit-keyframes text-flicker-out-glow {
     0% {
-        text-shadow: makelongshadow(50,1);
-        color:#f3f3f3;
-        transform: scale(1.5, 1.5);
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
     }
-    10% {
-        text-shadow: makelongshadow(50,1.5);
-        color:#f3f3f3;
-        transform: scale(1.5, 1.5);
+    13.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    14% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    14.9% {
+      opacity: 0;
+      text-shadow: none;
     }
     15% {
-        color:#f3f3f3;
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
     }
-    20% {    
-        color:#756480;
-        text-shadow: none;
-        transform: scale(1.1, 1.1);
+    22.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211,0.2), 0 0 100px rgba(211, 160, 211, 0.1);
     }
-    75% {
-        opacity: 1;
+    23% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    24.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    25% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    34.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    35% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    39.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    40% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+    }
+    42.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+    }
+    43% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    44.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    54.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    55% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    69.4% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    69.5% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    69.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    70% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    79.4% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    79.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
     }
     80% {
-        opacity: 0;    
-        color:#d2b5d5;
-        transform: scale(0.85, 0.9);
+      opacity: 0;
+      text-shadow: none;
     }
-    
+    89.8% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    89.9% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    90% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+    }
     100% {
-        opacity: 0;
+      opacity: 0;
     }
-}
+  }
+  @keyframes text-flicker-out-glow {
+    0% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211,0.45), 0 0 110px rgba(211, 160, 211,0.25), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    13.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    14% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    14.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    15% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    22.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    23% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    24.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    25% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    34.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+    }
+    35% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    39.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    40% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+    }
+    42.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211,0.35);
+    }
+    43% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    44.9% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
+    }
+    54.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
+    }
+    55% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    69.4% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    69.5% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    69.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+    }
+    70% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    79.4% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    79.9% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+    }
+    80% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    89.8% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    89.9% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    90% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
