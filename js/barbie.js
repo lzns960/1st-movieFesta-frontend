@@ -1,4 +1,5 @@
-//마퀴 텍스트 효과
+
+/* 마퀴 텍스트 효과 */
 const lineText1 = document.querySelector('.lineText1')
 const lineText2 = document.querySelector('.lineText2')
 const lineText3 = document.querySelector('.lineText3')
@@ -59,36 +60,114 @@ function animate() {
 
 animate()
 
-//cast 스크롤 애니메이션 
-const saDefaultMargin = 300;
-let saTriggerMargin = 0;
-let saTriggerHeight = 0;
-const saElementList = document.querySelectorAll('.sa');
+/* AOS */
+AOS.init({
+  offset: 300,
+  duration: 1000,
+  delay: 300,
+});
 
-const saFunc = function() {
-    for (const element of saElementList) {
-      if (!element.classList.contains('show')) {
-        if (element.dataset.saMargin) {
-          saTriggerMargin = parseInt(element.dataset.saMargin);
-        } else {
-          saTriggerMargin = saDefaultMargin;
-        }
-  
-        if (element.dataset.saTrigger) {
-          saTriggerHeight = document.querySelector(element.dataset.saTrigger).getBoundingClientRect().top + saTriggerMargin;
-        } else {
-          saTriggerHeight = element.getBoundingClientRect().top + saTriggerMargin;
-        }
-  
-        if (window.innerHeight > saTriggerHeight) {
-          let delay = (element.dataset.saDelay) ? element.dataset.saDelay : 0;
-          setTimeout(function() {
-            element.classList.add('show');
-          }, delay);
-        }
-      }
+/* 드라이기 스크롤 애니메이션 GSAP */
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline ({
+    scrollTrigger: {
+        trigger: ".dryer", //시작점
+        start: "top top", 
+        marker: true,
+        end: "+=2500px",
+        scrub: true,
+        pin: true, //꼭 있어야 화면이 고정된 채로 스크롤한 것이 보인다. 
     }
-  }
-  
-window.addEventListener('load', saFunc);
-window.addEventListener('scroll', saFunc);
+});
+
+tl.to (".barbieDryer", { 
+  xPercent: 20, 
+  yPercent: 20,
+  scale: 1.1,
+}, "<").to (".dollar0", {
+  xPercent: 50,
+  rotation: 40,
+  scale:0.9,
+}, "<").to (".dollar1", {
+  xPercent: 55, 
+  yPercent: 40,
+  rotation: -40,
+  scale:1.1,
+}, "<").to (".dollar2", {
+  xPercent: 60, 
+  yPercent: 40,
+  rotation: -40,
+  scale:1.1,
+}, "<").to (".dollar3", {
+  xPercent: 60, 
+  yPercent: 40,
+  rotation: -90,
+  scale:1.2,
+}, "<") .to (".dollar4", {
+  xPercent: 90, 
+  yPercent: 80,
+  rotation: 20,
+  scale:1.4,
+}, "<") .to (".dollar5", {
+  xPercent: 30, 
+  yPercent: 40,
+  rotation: 20,
+  scale:1.1,
+}, "<") .to (".dollar6", {
+  xPercent: 60, 
+  yPercent: 60,
+  rotation: 60,
+  scale:1.1,
+}, "<") .to (".dollar7", {
+  xPercent: 60, 
+  yPercent: 40,
+  rotation: -30,
+  scale:1.1,
+}, "<") .to (".dollar8", {
+  xPercent: 80, 
+  yPercent: 40,
+  rotation: 180,
+  scale:1.1,
+}, "<") .to (".dollar9", {
+  xPercent: 30, 
+  yPercent: 40,
+  rotation: 40,
+  scale:1.25,
+}, "<") .to (".dollar10", {
+  xPercent: 60, 
+  yPercent: 40,
+  rotation: -90,
+  scale:0.8,
+}, "<") .to (".dollar11", {
+  xPercent: 60, 
+  yPercent: 40,
+  rotation: -20,
+  scale:1.6,
+}, "<") .to (".dollar12", {
+  xPercent: 40, 
+  yPercent: 40,
+  rotation: 180,
+  scale:1.3,
+}, "<") .to (".wind0", {
+  xPercent: 40, 
+  yPercent: 50,
+  scale:1.1,
+}, "<") .to (".wind1", {
+  xPercent: 60, 
+  yPercent: 80,
+  scale:1.1,
+}, "<") .to (".wind2", {
+  xPercent: 40,
+  yPercent: 40,
+  scale:1.3,
+}, "<") .to (".wind3", {
+  xPercent: 200, 
+  yPercent: 80,
+  scale:1.1,
+}, "<") .to (".wind4", {
+  xPercent: 40, 
+  yPercent: 40,
+  rotation: -10,
+  scale:1.3,
+}, "<")

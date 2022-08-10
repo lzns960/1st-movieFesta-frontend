@@ -29,6 +29,18 @@ a {
   font-family: "cloudBK";
   src: url(../font/MCKLB___.ttf) format("truetype");
 }
+@font-face {
+  font-family: "CookieRun-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --color-primary: rgb(255, 235, 245);
   --color-secondary: rgb(247, 199, 223);
@@ -223,14 +235,9 @@ body .half2 .barbie_inner .mainText {
   letter-spacing: -0.4rem;
 }
 body .half2 .barbie_inner > p {
-  font: bold 1.1rem "NEXON Lv1 Gothic OTF";
+  font: 1.1rem "ghanachoco";
   text-align: center;
-}
-body .half2 .barbie_inner > p:nth-of-type(1) {
   margin-top: 6vw;
-}
-body .half2 .barbie_inner > p:nth-of-type(2) {
-  color: #f5b5c7;
 }
 body .half2 .barbie_inner .dryer {
   position: relative;
@@ -239,6 +246,7 @@ body .half2 .barbie_inner .dryer {
 }
 body .half2 .barbie_inner .dryer img {
   position: absolute;
+  transform: rotate 0deg;
 }
 body .half2 .barbie_inner .dryer > img {
   width: 18vw;
@@ -374,19 +382,6 @@ body .half2 .barbie_inner .role {
   top: 6vw;
   left: 0;
   margin-bottom: 5vw;
-  /* 스크롤 애니메이션 */
-  /* 아래에서 위로 페이드 인 */
-}
-body .half2 .barbie_inner .role .sa {
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-body .half2 .barbie_inner .role .sa-up {
-  transform: translate(0, 100px);
-}
-body .half2 .barbie_inner .role .sa.show {
-  opacity: 1;
-  transform: none;
 }
 body .half2 .barbie_inner .role .barbieRole {
   width: 13vw;
@@ -575,6 +570,23 @@ body .half2 .coverGreen4 .lineText4 {
   color: #ff3796;
   font: bold 1rem/1 "Playfair Display";
   font-style: italic;
+}
+body .topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.4039215686);
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4039215686);
+  cursor: pointer;
+}
+body .topBtn:hover {
+  background-color: rgba(255, 255, 255, 0.4039215686);
+  border: 1px solid rgba(0, 0, 0, 0.4039215686);
+  color: black;
 }
 
 @-webkit-keyframes shadows {

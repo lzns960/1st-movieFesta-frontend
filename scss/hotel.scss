@@ -19,503 +19,680 @@
     font-family: "archer";
     src: url(../font/ArcherSemiboldPro.otf) format("truetype");
 }
-
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 // font-family: 'Josefin Sans', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 // font-family: 'Playfair Display', serif;
 
-// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12 red #59bdf0 yello #FCE52B
+// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12 red #59bdf0 yellow #F9F88E
 
 body {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 235, 245) ;
+
+  /* 왼쪽 페이지 */
+  .half {
+    width: calc(50% + 1px);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
     top: 0;
-    left: 0;
-    background-color: rgb(255, 235, 245) ;
+    z-index: 1;
+    background-image: url(../img/hotelDayNight.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-right: 1px solid #000;
 
-    /* 왼쪽 페이지 */
-    .half {
-        width: calc(50% + 1px);
-        height: 100%;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        background-image: url(../img/hotelDayNight.webp);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-right: 1px solid #000;
-
-        p {
-            position: absolute;
-            font: 7.5rem/1 "soul";
-            top: 3vw;
-            left: 2vw;
-            color:#fff292;
-            text-shadow: 0.2rem 0.5rem 1rem #9e6b34c5;
-        }
+    p {
+      position: absolute;
+      font: 8rem/1 "archer";
+      top: 3vw;
+      left: 7vw;
+      color:#37113ca8;
+      text-shadow: 0.2rem 0.5rem 1rem #9e6b34c5;
     }
+  }
 
-    /* 오른쪽 페이지 */
-    .half2 {
-        position: relative;
-        width: 50%;
-        top: 0;
-        left: 50%;
-        overflow-x: hidden;
+  /* 오른쪽 페이지 */
+  .half2 {
+    position: relative;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
 
-        /* 오른쪽 페이지 헤더 */
-        .common_header {
-            top: 0;
-            width: 100%;
-            height: 15vh;
-            color: #000;
-        
-            nav {
-                padding: 3vw;
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-                width: 100%;
-            }
-        
-            .main_nav {
-                width: 70%;
-                padding: 0.7vh;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font: 30px/1 "archer";
-                cursor: pointer;
-
-                li {
-                    text-align: center;
-                    flex-basis: 100px;
-                }
-            }
-            .main_nav li:hover {
-                font: 30px/1 'cloud';
-                transform: scale(1.5);
-                font-weight: 500;
-            }
-        
-            .sub_nav {
-                width: 7vw;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font: 20px/1 "archer";
-                box-sizing: border-box;
-                cursor: pointer;
-            
-                span {
-                    border: 1px solid black;
-                    border-radius: 10px;
-                    padding: 0.7vh;
-                    padding-top: 1vh;
-                }
-        
-                span:hover {
-                    background-color: #f5b5c7;
-                    transition: 1.3s;
-                }
-        
-                .lang:hover {
-                    text-decoration: underline;
-                    font-style: italic;
-                }
-            }
-
-            .coverPurple {
-                top: 0;
-                width: 100vw;
-                background-color: purple;
-                border: 1px solid #878787;
-                padding: 1rem;
+    /* 오른쪽 페이지 헤더 */
+    .common_header {
+      top: 0;
+      width: 100%;
+      height: 15vh;
+      color: #000;
     
-                .lineText1 {
-                    color:plum;
-                    font: italic bold 1.2rem/1 "archer";
-                }
-            }
+      nav {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      }
+    
+      .main_nav {
+        width: 70%;
+        padding: 0.7vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 30px/1 'Josefin Sans';
+        cursor: pointer;
+
+        li {
+            text-align: center;
+            flex-basis: 100px;
+        }
+      }
+
+      .main_nav li:hover {
+        font: 30px/1 'archer';
+        transform: scale(1.5);
+        font-weight: 500;
+      }
+    
+      .sub_nav {
+        width: 7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 20px/1 "archer";
+        box-sizing: border-box;
+        cursor: pointer;
+    
+        span {
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 0.7vh;
+          padding-top: 1vh;
         }
 
-
-        .hotel_inner {
-            padding: 3vw;
-
-            /* 오른쪽 페이지__메인글씨 */
-            .mainText{
-                margin-top: 3vw;
-                width: 100%;
-                font: 4rem/1 "archer";
-                text-align: center;
-                letter-spacing: -0.4rem;
-                -webkit-animation: text-flicker-out-glow 2.5s linear infinite both;
-                animation: text-flicker-out-glow 2.5s linear infinite both;
-                color: rgb(255, 255, 255);
-                font: 150px/1 'TeXGyreAdventorBold';
-                text-transform: none;        
-            }
-            >p {
-                margin-top: 8vw;
-                font: bold 1.2rem 'NEXON Lv1 Gothic OTF';
-                text-align: center;
-            }
-
-            .hotelMiddle {
-                position: relative;
-                top: 0;
-                left:0;
-                width: 100%;
-                height: 100vh;
-
-
-                .hotelStaff {
-                    position: absolute;
-                    top: 0;
-                    left:0;
-                    width: 100%;
-                    height: 60vh;
-                    background-image: url(../img/hotelStaff.gif);
-                    background-position:center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    // background-image: url(../img/hotelStaff.gif);
-                    // background-position:center;
-                    // background-repeat: no-repeat;
-                    // background-size: contain;
-
-                }
-                .hotelDoor {
-                    position: absolute;
-                    top: 0;
-                    left: -7vw;
-                    width: 130%;
-                }
-
-            }
-
-            /* 오른쪽 페이지 줄거리 소개 */
-            .scrollArtice {
-                padding-top: 50vw;
-
-                &.scrollArticle0 {
-                    
-                    h1{
-                    font-size: 4rem;
-                    text-align: center;}
-
-                    .welcomeMessage {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 3em;
-                        font-size:2.5rem;
-                        margin: 5px 0;
-
-                        & p {
-                            font-weight: bold;
-                            text-align: center;
-                            line-height: 1.2;
-                        }
-                    }
-                    .stickyElem{
-                        display: none;
-                        position:fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                    }
-                }
-                .midMessage {
-                    padding: 0 1rem;
-                    font-size: 2rem;
-                    color: #888;
-
-                    & strong {
-                        color: black;
-                    }
-                }
-            }
-
-
-            /* 마퀴 텍스트 효과 */
-            .coverPurple {
-                width: 100vw;
-                background-color: purple;
-                border: 1px solid #878787;
-                padding: 1rem;
-                position: relative;
-                top: 5vw;
-                z-index: 1;
-
-                .lineText2 {
-                    color:plum;
-                    font: italic bold 1.2rem/1 "archer";
-                }
-            }
+        span:hover {
+          background-color: #f5b5c7;
+          transition: 1.3s;
         }
+
+        .lang:hover {
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+
+      .coverPurple {
+        top: 0;
+        width: 100vw;
+        background-color: purple;
+        border: 1px solid #878787;
+        padding: 1rem;
+
+        .lineText1 {
+          color:plum;
+          font: italic bold 1.2rem/1 "archer";
+        }
+      }
     }
+
+    .hotel_inner {
+      padding: 3vw;
+
+      /* 오른쪽 페이지__메인글씨 */
+      .mainText{
+        // margin-top: 5vw;
+        // width: 100%;
+        // font: 8.5rem/1 "archer";
+        // text-align: center;
+        // letter-spacing: -0.4rem;
+        // -webkit-animation: text-flicker-out-glow 2.5s linear infinite both;
+        // animation: text-flicker-out-glow 2.5s linear infinite both;
+        // color: purple;
+        // text-transform: none;        
+      }
+      >p {
+        margin-top: 8vw;
+        font: 1.2rem/1.8 'NEXON Lv1 Gothic OTF';
+        text-align: center;
+      }
+      
+      /* 오른쪽 페이지__OST */
+      h2 {
+        font: 7rem "archer";
+        padding: 3vw;
+        text-align: center;
+        color: #CC6A93;
+        text-shadow: 1px 1px 10px rgb(175, 175, 175);
+      }
+
+      .nav {
+        width: 100%;
+        height: 70vh;
+        // top: 20vw;
+        position: relative;
+        // background-color: rgba(0,0,0,0.2);
+        backdrop-filter: blur(2px);
+        margin-left: 2vw;
+
+        li {
+          position: relative;
+          width: 100%;
+          padding: 2vw;
+          margin-bottom: -5vh;
+          opacity: 0.4;
+          cursor: pointer;
+          transition: 1.4s;
+          transform-origin: left center;
+
+          &:hover {
+            transform: scale(1.2);
+            opacity: 1;
+          }
+
+          img {
+            width: 10%;
+            height: 40%;
+            position: absolute;
+            float: left;
+            border-radius: 10px;
+          }
+
+          h2 {
+            position: relative;
+            top: -3vh;
+            font: 1rem "archer";
+            display: inline-block;
+            color: #000;
+            letter-spacing: 1px;
+            // margin-bottom: 1vh;
+            margin-left: 3vw;
+
+
+            &::after {
+              content: "";
+              display: block;
+              width: 20px;
+              height: 1px;
+              background-color: #000;
+              // margin-top: 5px;
+              transition: 1.5s;
+            }
+          }
+
+          p {
+            position: relative;
+            top: -6.5vh;
+            color: #000;
+            font: 1rem 'Source Sans Pro';
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-left: 6vw;
+          }
+
+          // &.on {
+          //     background-color: linear-gradient(90deg,rgba(0,0,0,0.9),rgba(0,0,0,0));
+          //     transform: scale(1.2);
+          //     opacity: 1;
+          // }
+
+          h2::after {
+            width: 100%;
+          }
+        }
+      }
+
+      /* 오른쪽 페이지 등장인물 */
+      &.hotelCast{
+        width: 100%;
+        height: 245vh;
+
+        h2 {
+          color: #CC6A93;
+          text-shadow: 1px 1px 10px rgb(175, 175, 175);
+        }
+        ul {
+          .castRight {
+            display: flex;
+            align-items: center;
+            margin: 0 -2vw  2vw -2vw;
+
+            img {
+              width: 40%;
+              height: 30%;
+              border-radius: 5%;
+              box-shadow: 5px 5px 5px #000;
+            }
+
+            h2 {
+              font: 3rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+            }
+            p{
+              font: 1.5rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+
+            }
+          }
+
+          .castLeft {
+            display: flex;
+            align-items: center;
+            margin: 0 -1vw 2vw 0;
+
+            img {
+              width: 40%;
+              height: 30vw;
+              border-radius: 5%;
+              box-shadow: 5px 5px 5px  #000;
+            }
+            h2 {
+              font: 3rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+
+            }
+            p{
+              font: 1.5rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+              margin-right: 3vw;
+            }
+          }
+        }
+      }
+
+      /* 오른쪽 페이지 호텔입장 */
+      .hotelMiddle {
+        position: relative;
+        top: 0;
+        left:0;
+        width: 100%;
+
+      
+        .hotelStaff {
+          position: absolute;
+          top: 0;
+          left:0;
+          width: 100%;
+          height: 40vw;
+          background-image: url(../img/hotelStaff.gif);
+          background-position:center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      
+        .hotelDoor {
+          position: absolute;
+          top: 0;
+          left: -7vw;
+          width: 130%;
+          height: 40vw;
+        }
+      }
+    }
+    /* 마퀴 텍스트 효과 */
+    .coverPurple {
+      width: 100vw;
+
+      .lineText2 {
+        color:plum;
+        font: italic bold 1.2rem/1 "archer";
+        background-color: purple;
+        border: 1px solid #878787;
+        padding: 1rem;
+      }
+    }
+  }
+  .topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00000067;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff67;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff67;
+      border: 1px solid #00000067;
+      color: black;
+    }
+  }
 }
 
-#showScene0 #scrollArticle0 .stickyElem,
-#showScene1 #scrollArticle1 .stickyElem,
-#showScene2 #scrollArticle1 .stickyElem,
-#showScene3 #scrollArticle3 .stickyElem {
-    display: block;
+
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+$stroke-dash-max: 360;
+$easings__ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$easings__ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easings__ease-in-out: cubic-bezier(.59,.03,.27,.89);
+
+
+
+$font-family-stack: 'MoonFlower', 'Amatic SC', cursive;
+
+
+@keyframes DrawTextPath {
+    0% {
+       stroke-dasharray: 0 $stroke-dash-max;
+    }
+    100% {
+        //stroke-dasharray: $stroke-dash-max $stroke-dash-max;
+        stroke-dasharray: 100% 100%;
+    }        
 }
+
+
+
+.main-view-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    margin-top:-15%;
+}
+
+.text-container {
+    width: 50%;
+    
+}
+
+.text-content {
+    
+}
+
+.row {
+
+    fill: none;    
+    stroke: purple;
+    stroke-miterlimit: 10;
+    // font-family: "archer";
+    font: 15em "archer";
+    stroke-width: .0225em;
+    //letter-spacing: 15;
+    //stroke-dasharray: 0 $stroke-dash-max 0 0;
+    //stroke-dashoffset: 0;
+
+    &.drawing {
+        animation: DrawTextPath 4.1s $easings__ease-in-out;
+        animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-delay: 0.3s;
+    }
+    
+}
+
 
 @-webkit-keyframes text-flicker-out-glow {
-    0% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    13.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    14% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    14.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    15% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    22.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211,0.2), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    23% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    24.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    25% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    34.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    35% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    39.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    40% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
-    }
-    42.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
-    }
-    43% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    44.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    54.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    55% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    69.4% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    69.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    69.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    70% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    79.4% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    79.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
-    }
-    80% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    89.8% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    89.9% {
-      opacity: 1;
-      text-shadow: none;
-    }
-    90% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
-    }
-    100% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
   }
-  @keyframes text-flicker-out-glow {
-    0% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211,0.45), 0 0 110px rgba(211, 160, 211,0.25), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    13.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    14% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    14.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    15% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    22.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    23% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    24.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    25% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    34.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
-    }
-    35% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    39.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    40% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
-    }
-    42.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211,0.35);
-    }
-    43% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    44.9% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
-    }
-    54.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
-    }
-    55% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    69.4% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    69.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    69.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
-    }
-    70% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    79.4% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    79.9% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
-    }
-    80% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    89.8% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    89.9% {
-      opacity: 1;
-      text-shadow: none;
-    }
-    90% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
-    }
-    100% {
-      opacity: 0;
-    }
+  13.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
   }
-  
+  14% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  14.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  15% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  22.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211,0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  23% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  24.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  25% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  34.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  35% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  39.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  40% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+  }
+  42.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+  }
+  43% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  44.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  54.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  55% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  69.4% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  69.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  69.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  70% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  79.4% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  79.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+  }
+  80% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  89.8% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  89.9% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  90% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text-flicker-out-glow {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211,0.45), 0 0 110px rgba(211, 160, 211,0.25), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  13.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.6), 0 0 60px rgba(211, 160, 211, 0.45), 0 0 110px rgba(211, 160, 211, 0.25), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  14% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  14.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  15% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  22.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.4), 0 0 110px rgba(211, 160, 211, 0.2), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  23% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  24.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  25% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  34.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35), 0 0 100px rgba(211, 160, 211, 0.1);
+  }
+  35% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  39.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  40% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211, 0.35);
+  }
+  42.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.55), 0 0 60px rgba(211, 160, 211,0.35);
+  }
+  43% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  44.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
+  }
+  54.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211,0.25);
+  }
+  55% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  69.4% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  69.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  69.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.45), 0 0 60px rgba(211, 160, 211, 0.25);
+  }
+  70% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  79.4% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  79.9% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+  }
+  80% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  89.8% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  89.9% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  90% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(211, 160, 211, 0.25);
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -15,6 +15,19 @@
     font-family: "cloudBK";
     src: url(../font/MCKLB___.ttf) format("truetype");
 }
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 // font-family: 'Josefin Sans', sans-serif;
@@ -226,15 +239,9 @@ body {
                 letter-spacing: -0.4rem;
             }
             >p {
-                font: bold 1.1rem 'NEXON Lv1 Gothic OTF';
+                font: 1.1rem 'ghanachoco';
                 text-align: center;
-
-                &:nth-of-type(1){
-                    margin-top: 6vw;
-                }
-                &:nth-of-type(2){
-                    color:#f5b5c7;
-                }
+                margin-top: 6vw;
             }
 
             /* 오른쪽 페이지__드라이기 */
@@ -245,6 +252,7 @@ body {
 
                 & img {
                     position: absolute;
+                    transform: rotate (0deg);
                 }
 
                 >img {
@@ -387,19 +395,6 @@ body {
                 left: 0;
                 margin-bottom: 5vw;
                 
-                /* 스크롤 애니메이션 */
-                .sa {
-                    opacity: 0;
-                    transition: all .5s ease;
-                }
-                /* 아래에서 위로 페이드 인 */
-                .sa-up {
-                    transform: translate(0, 100px);
-                }
-                .sa.show {
-                    opacity: 1;
-                    transform: none;
-                }
                 .barbieRole {
                     width: 13vw;
                     position: absolute;
@@ -609,6 +604,25 @@ body {
                 font: bold 1rem/1 'Playfair Display';
                 font-style:italic;
             }
+        }
+    }
+    
+    .topBtn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #00000067;
+        color: white;
+        font-size: 40px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #ffffff67;
+        cursor: pointer;
+
+        &:hover {
+        background-color: #ffffff67;
+        border: 1px solid #00000067;
+        color: black;
         }
     }
 }

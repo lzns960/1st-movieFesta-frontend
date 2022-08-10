@@ -1,83 +1,9 @@
-/* 스크롤 애니메이션 */
-(() => {
-    let yOffset = 0; //window.pageYOffset 대신 쓸 변수 
-    let prevScrollheight = 0; //현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 아티클 높이 값의 합
-    let currentScene = 0; //현재 활성화된 씬 (scrollArticle)
-    const sceneInfo = [
-        {
-            //0
-            type: 'sticky',
-            heightNum: 5, //브라우저 높이의 5배로 scrollHeight를 세팅
-            scrollHeight:0,
-            objs: {
-                container: document.querySelector('.scrollArticle0')
-            }
-        },
-
-        {
-            //1
-            type: 'normal',
-            heightNum: 5, //브라우저 높이의 5배로 scrollHeight를 세팅
-            scrollHeight:0,
-            objs: {
-                container: document.querySelector('.scrollArticle1')
-            }
-        },
-    ];
-
-    function setLayout(){
-        //각 스크롤 아티클의 높이 세팅
-        for (let i = 0; i < sceneInfo.length; i++) {
-            sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-            sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
-        }
-
-        yOffset = window.pageYOffset;
-        let totalScrollHeight = 0;
-        for (let i = 0; i < sceneInfo.length; i++){
-            totalScrollHeight += sceneInfo[i].scrollHeight;
-
-            if (totalScrollHeight >= YOffset){
-                currentScene = i;
-                break;
-            }
-            document.body.setAttribute('id', `showScene${currentScene}`)
-        }
-    }
-
-    function scrollLoop(){
-        prevScrollheight = 0; 
-        for (let i = 0; i < currentScene; i++) {
-            prevScrollheight += sceneInfo[i].scrollHeight;
-        }
-
-        if (yOffset > prevScrollheight +sceneInfo[currentScene].scrollHeight) {
-            currentScene++;
-            document.body.setAttribute('id', `showScene${currentScene}`);
-        }
-        if (yOffset < prevScrollheight) {
-            if (currentScene === 0 ) return; //브라우저 바운스 효과로 인해 마이너스가 되는 것을 방지
-            currentScene--;
-            document.body.setAttribute('id', `showScene${currentScene}`);
-        }
-    }
-
-    window.addEventListener('resize', setLayout);
-    window.addEventListener('scroll', ()=> {
-        yOffset = window.pageYOffset;
-        scrollLoop();
-    });
-
-    window.addEventListener('load', setLayout);
-    window.addEventListener('resize', setLayout);
-}) ();
-
 //마퀴 텍스트 효과
 const lineText1 = document.querySelector('.lineText1')
 const lineText2 = document.querySelector('.lineText2')
 
-const textArr1 = '300 000 BARBIE IS STEPPING INTO THE DIGITAL ART WORLD DOLLED UP IN BALMAIN BARBIE IS STEPPING INTO THE DIGITAL ART WORLD DOLLED UP IN BALMAIN'.split(' ')
-const textArr2 = 'BARBIE IS THE MOST POPULAR FASHION DOLL EVER PRODUCED BARBIE IS THE MOST POPULAR FASHION DOLL EVER PRODUCED'.split(' ')
+const textArr1 = 'The Grand Budapest Hotel is a 2014 comedy-drama film written and directed by Wes'.split(' ')
+const textArr2 = 'The Grand Budapest Hotel is a 2014 comedy-drama film written and directed by Wes'.split(' ')
 
 function initTexts(element, textArray) {
     textArray.push(...textArray) //배열추가
@@ -116,26 +42,66 @@ animate()
 
 
 
-//hotelDoor 
+/* hotelDoor 
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline ({
     scrollTrigger: {
         trigger: ".hotelStaff", //시작점
-        start: "bottom bottom", 
-        marker: true,
-        end: "+=700px",
+        start: "top top", 
+        end: "+=1000px",
         scrub: true,
         pin: true, //꼭 있어야 화면이 고정된 채로 스크롤한 것이 보인다. 
     }
 });
 
-tl.to (".hotelDoor", { yPercent: 100, scale:2.3}) // x축 상대크기 자기 크기만큼 사라져있는 것
-/*
-
+tl.to (".hotelDoor", { scale: 2.3})
+*/
 AOS.init({
     offset: 300,
     duration: 1000,
 });
-*/
 
+
+/* main text */
+var demo = (function (window) {
+    
+    'use strict';
+        
+    var SELECTORS = {
+            textRows: '.row'
+        },
+        
+        CLASSES = {
+            drawingWord: 'drawing'
+        },
+        
+        textRows = document.querySelectorAll(SELECTORS.textRows);
+    
+        
+    
+    function applyDrawEffect (rowSVG) {        
+      rowSVG.classList.add(CLASSES.drawingWord);            
+    }
+        
+    
+    function drawWords () {        
+        [].forEach.call(textRows, applyDrawEffect);        
+    }
+    
+    
+    function init () {
+        drawWords();    
+    }
+    
+    
+    return {
+        init: init
+    };
+    
+}(window));
+
+
+
+
+window.addEventListener('DOMContentLoaded', demo.init, false);
