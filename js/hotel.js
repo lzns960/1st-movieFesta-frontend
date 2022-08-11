@@ -42,21 +42,40 @@ animate()
 
 
 
-/* hotelDoor 
+/* hotelDoor */
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline ({
     scrollTrigger: {
-        trigger: ".hotelStaff", //시작점
+        trigger: ".hotelMiddle", //시작점
         start: "top top", 
-        end: "+=1000px",
+        end: "+=2000px",
         scrub: true,
         pin: true, //꼭 있어야 화면이 고정된 채로 스크롤한 것이 보인다. 
+        ease: 'steps(10)',
+        duration: 1,
     }
 });
 
-tl.to (".hotelDoor", { scale: 2.3})
-*/
+tl.to (".hotelText", {
+    rotation: 360,
+    opacity:1, 
+}).to(".hotelDoor", { 
+    scale: 2.3,
+}).to(".hotelDoor", { 
+    scale: 4,
+    yPercent:-65,
+    xPercent:-3,
+}).to (".hotelStaff", { 
+    yPercent:-20,
+    scale: 1.5,
+}, "<" ).to (".hotelText", {
+    scale: 0.8,
+    yPercent:-10,
+    xPercent:2,
+}, "<")
+
+
 AOS.init({
     offset: 300,
     duration: 1000,

@@ -148,7 +148,7 @@ body .half2 {
 body .half2 .common_header {
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: 15vw;
   color: #000;
 }
 body .half2 .common_header nav {
@@ -160,7 +160,7 @@ body .half2 .common_header nav {
 }
 body .half2 .common_header .main_nav {
   width: 70%;
-  padding: 0.7vh;
+  padding: 0.7vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,8 +188,8 @@ body .half2 .common_header .sub_nav {
 body .half2 .common_header .sub_nav span {
   border: 1px solid black;
   border-radius: 10px;
-  padding: 0.7vh;
-  padding-top: 1vh;
+  padding: 0.6vw;
+  padding-top: 0.8vw;
 }
 body .half2 .common_header .sub_nav span:hover {
   background-color: #59bdf0;
@@ -377,7 +377,7 @@ body .half2 .barbie_inner > h2 {
 }
 body .half2 .barbie_inner .role {
   width: 100%;
-  height: 30vh;
+  height: 15vw;
   position: relative;
   top: 6vw;
   left: 0;
@@ -463,7 +463,7 @@ body .half2 .barbieStory {
   position: relative;
   top: 5vw;
   width: 100%;
-  height: 125vh;
+  height: 70vw;
   background-image: url(../img/bgCandy.jpg);
   background-size: cover;
   background-repeat: no-repeat;

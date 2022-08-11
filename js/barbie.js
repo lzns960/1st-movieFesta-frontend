@@ -171,3 +171,21 @@ tl.to (".barbieDryer", {
   rotation: -10,
   scale:1.3,
 }, "<")
+
+
+
+const tl2 = gsap.timeline ({
+  scrollTrigger: {
+      trigger: ".year2000", //시작점
+      start: "top top", 
+      marker: true,
+      end: "+=500px",
+      scrub: true,
+      pin: true, //꼭 있어야 화면이 고정된 채로 스크롤한 것이 보인다. 
+      duration: 3, 
+  }
+});
+
+tl2.to (".year2000", { 
+  yPercent: 100,
+})

@@ -144,7 +144,7 @@ body {
         .common_header {
             top: 0;
             width: 100%;
-            height: 15vh;
+            height: 15vw;
             color: #000;
         
             nav {
@@ -157,7 +157,7 @@ body {
         
             .main_nav {
                 width: 70%;
-                padding: 0.7vh;
+                padding: 0.7vw;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -187,8 +187,8 @@ body {
                 span {
                     border: 1px solid black;
                     border-radius: 10px;
-                    padding: 0.7vh;
-                    padding-top: 1vh;
+                    padding: 0.6vw;
+                    padding-top: 0.8vw;
                 }
         
                 span:hover {
@@ -389,7 +389,7 @@ body {
             }
             .role {
                 width: 100%;
-                height: 30vh;
+                height: 15vw;
                 position: relative;
                 top: 6vw;
                 left: 0;
@@ -487,7 +487,7 @@ body {
             position: relative;
             top: 5vw;
             width: 100%;
-            height: 125vh;
+            height: 70vw;
             background-image: url(../img/bgCandy.jpg);
             background-size: cover;
             background-repeat: no-repeat;
