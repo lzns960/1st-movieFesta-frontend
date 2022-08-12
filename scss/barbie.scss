@@ -50,6 +50,7 @@ body {
     top: 0;
     left: 0;
     background-color: #f5b5c7;
+    transition: .5s;
 
 
     /* 왼쪽 페이지 */
@@ -153,7 +154,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font: 30px/1 'Josefin Sans';
+                font: 30px/1 'ghanachoco';
                 cursor: pointer;
 
                 li {
@@ -162,8 +163,8 @@ body {
                 }
             }
             .main_nav li:hover {
-                font: 30px/1 'cloud';
-                transform: scale(1.5);
+                font: 30px/1 ;
+                transform: scale(1.2);
                 font-weight: 500;
             }
         
@@ -172,7 +173,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font: 20px/1 'Josefin Sans';
+                font: 20px/1 'ghanachoco';
                 box-sizing: border-box;
                 cursor: pointer;
             
@@ -181,16 +182,12 @@ body {
                     border-radius: 10px;
                     padding: 0.6vw;
                     padding-top: 0.8vw;
+                    margin-left: 2vw;
                 }
         
                 span:hover {
                     background-color: #59bdf0;
                     transition: 1.3s;
-                }
-        
-                .lang:hover {
-                    text-decoration: underline;
-                    font-style: italic;
                 }
             }
 
@@ -219,7 +216,7 @@ body {
                 justify-content: center;
             }
             .mainText{
-                margin-top: 2vw;
+                margin-top: -2vw;
                 width: 100%;
                 height: 30vw;
                 font: 15rem/1 "cloudBK";
@@ -233,7 +230,7 @@ body {
             >p {
                 font: 1.1rem 'ghanachoco';
                 text-align: center;
-                margin-top: 6vw;
+                margin-top: 8vw;
             }
 
             /* 오른쪽 페이지__드라이기 */
@@ -610,6 +607,7 @@ body {
         border-radius: 10px;
         border: 1px solid #ffffff67;
         cursor: pointer;
+        z-index: 1;
 
         &:hover {
         background-color: #ffffff67;
@@ -682,4 +680,3 @@ body {
       transform: translate(0px, 0px);
     }
   }
-  
