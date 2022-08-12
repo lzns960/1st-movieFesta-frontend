@@ -68,40 +68,32 @@ body .half {
   background-color: #59bdf0;
   border-right: 1px solid #000;
 }
-body .half p {
-  position: absolute;
-  font: 7.5rem/1 "soul";
-  top: 3vw;
-  left: 2vw;
-  color: #D8FD12;
-  text-shadow: 0.2rem 0.5rem 1rem rgba(85, 85, 85, 0.8);
-}
 body .half img {
   position: absolute;
 }
 body .half .twingkle_effect1 {
-  width: 20vw;
-  top: 25vw;
-  left: 8vw;
+  width: 30vw;
+  top: 0vw;
+  left: 0vw;
 }
 body .half .twingkle_effect2 {
-  width: 20vw;
-  top: 25vw;
+  width: 30vw;
+  top: 0vw;
   left: 23vw;
 }
 body .half .barbie_doll {
-  top: 18vw;
+  top: 15vw;
   left: 17vw;
 }
 body .half .dummies > img:nth-of-type(1) {
-  width: 7vw;
-  top: 11vw;
-  left: 11vw;
+  width: 8vw;
+  top: 4vw;
+  left: 10vw;
   transform: rotate(35deg);
 }
 body .half .dummies > img:nth-of-type(2) {
-  width: 6vw;
-  top: 12vw;
+  width: 7vw;
+  top: 7vw;
   left: 33vw;
   transform: rotate(-35deg);
 }
@@ -125,12 +117,12 @@ body .half .dummies > img:nth-of-type(5) {
 }
 body .half .dummies > img:nth-of-type(6) {
   width: 7vw;
-  top: 40vw;
+  top: 45vw;
   left: 35vw;
   transform: rotate(50deg);
 }
 body .half .barbie_text {
-  top: 35vw;
+  top: 33vw;
   left: 14vw;
   width: 20vw;
   transform: rotate(35deg);

@@ -139,11 +139,13 @@ body {
         width: 100vw;
         background-color: purple;
         border: 1px solid #878787;
-        padding: 1rem;
+
 
         .lineText1 {
           color:plum;
-          font: italic bold 1.2rem/1 "archer";
+          font: italic bold 1rem/1 "archer";
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
     }
@@ -164,14 +166,14 @@ body {
         // text-transform: none;        
       }
       >p {
-        margin-top: 8vw;
+        margin-top: 1vw;
         font: 1.2rem/1.8 'NEXON Lv1 Gothic OTF';
         text-align: center;
       }
       
       /* 오른쪽 페이지__OST */
       h2 {
-        font: 7rem "archer";
+        font: 6rem "archer";
         padding: 3vw;
         text-align: center;
         color: #CC6A93;
@@ -318,7 +320,7 @@ body {
       /* 오른쪽 페이지 호텔입장 */
       .hotelMiddle {
         position: relative;
-        top: 0;
+        top: 0vw;
         left:0;
         width: 100%;
         height: 45vw;
@@ -328,42 +330,46 @@ body {
           position: absolute;
           width: 100%;
           opacity: 0; 
-          top: 2vw;
+          top: 3vw;
         }
       
         .hotelStaff {
           position: absolute;
-          top: 9vw;
+          top: 6.1vw;
           left:0;
           width: 100%;
-          height: 100%;
+          height: 100vw;
           background-image: url(../img/hotelStaff.gif);
           background-position:center;
           background-repeat: no-repeat;
           background-size: contain;
+          margin-top: -12.2vw;
         }
       
         .hotelDoor {
           position: absolute;
-          top: 14.8vw;
+          top: 11.8vw;
           left: 0;
           width: 120%;
           height: 39vw;
           margin-left:-4.7vw;
-          margin-top: -3vw;
+          margin-top: 10.5vw;
         }
       }
     }
     /* 마퀴 텍스트 효과 */
-    .coverPurple {
+    .coverPurple {        
+      top: 0;
       width: 100vw;
+      background-color: purple;
+      border: 1px solid #878787;
+
 
       .lineText2 {
         color:plum;
-        font: italic bold 1.2rem/1 "archer";
-        background-color: purple;
-        border: 1px solid #878787;
-        padding: 1rem;
+        font: italic bold 1rem/1 "archer";
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
     }
   }
@@ -421,7 +427,7 @@ $font-family-stack: 'MoonFlower', 'Amatic SC', cursive;
 .scene {
     width: 100%;
     height: 100%;
-    margin-top:-15%;
+    margin-top:-15vw;
 }
 
 .text-container {

@@ -68,13 +68,12 @@ tl.to (".hotelText", {
     xPercent:-3,
 }).to (".hotelStaff", { 
     yPercent:-20,
-    scale: 1.5,
+    scale: 1.8,
 }, "<" ).to (".hotelText", {
     scale: 0.8,
     yPercent:-10,
     xPercent:2,
 }, "<")
-
 
 AOS.init({
     offset: 300,
