@@ -1,0 +1,677 @@
+/* RESET */
+@import "reset";
+
+/* FONT */
+@font-face {
+  font-family: "soul";
+  src: url(../font/soul-handwriting_free-version.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "cloud";
+  src: url(../font/MCKLW___.ttf) format("truetype");
+}
+@font-face {
+  font-family: "cloudBK";
+  src: url(../font/MCKLB___.ttf) format("truetype");
+}
+@font-face {
+  font-family: "CookieRun-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+// font-family: 'Josefin Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12
+
+:root {
+  --color-primary: rgb(255, 235, 245);
+  --color-secondary: rgb(247, 199, 223);
+  --color-tertiary: rgb(249, 151, 200);
+  --color-quaternary: rgb(248, 127, 187);
+  --color-quinary: hotpink;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #f5b5c7;
+  transition: 0.5s;
+
+  /* 왼쪽 페이지 */
+  .half {
+    width: calc(50% + 1px);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #59bdf0;
+    border-right: 1px solid #000;
+
+    img {
+      position: absolute;
+    }
+    .twingkle_effect1 {
+      width: 30vw;
+      top: 0vw;
+      left: 0vw;
+    }
+    .twingkle_effect2 {
+      width: 30vw;
+      top: 0vw;
+      left: 23vw;
+    }
+    .barbie_doll {
+      top: 15vw;
+      left: 17vw;
+    }
+    .dummies > img:nth-of-type(1) {
+      width: 8vw;
+      top: 4vw;
+      left: 10vw;
+      transform: rotate(35deg);
+    }
+    .dummies > img:nth-of-type(2) {
+      width: 7vw;
+      top: 7vw;
+      left: 33vw;
+      transform: rotate(-35deg);
+    }
+    .dummies > img:nth-of-type(3) {
+      width: 8vw;
+      top: 40vw;
+      left: 3vw;
+      transform: rotate(-15deg);
+    }
+    .dummies > img:nth-of-type(4) {
+      width: 50px;
+      top: 44vw;
+      left: 18vw;
+      transform: rotate(-10deg);
+    }
+    .dummies > img:nth-of-type(5) {
+      width: 4vw;
+      top: 44vw;
+      left: 30vw;
+      transform: rotate(10deg);
+    }
+    .dummies > img:nth-of-type(6) {
+      width: 7vw;
+      top: 45vw;
+      left: 35vw;
+      transform: rotate(50deg);
+    }
+    .barbie_text {
+      top: 33vw;
+      left: 14vw;
+      width: 20vw;
+      transform: rotate(35deg);
+    }
+  }
+
+  /* 오른쪽 페이지 */
+  .half2 {
+    position: relative;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+
+    /* 오른쪽 페이지 헤더 */
+    .common_header {
+      top: 0;
+      width: 100%;
+      height: 15vw;
+      color: #000;
+
+      nav {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      }
+
+      .main_nav {
+        width: 70%;
+        padding: 0.7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 30px/1 "ghanachoco";
+        cursor: pointer;
+
+        li {
+          text-align: center;
+          flex-basis: 100px;
+        }
+      }
+      .main_nav li:hover {
+        font: 30px/1;
+        transform: scale(1.2);
+        font-weight: 500;
+      }
+
+      .sub_nav {
+        width: 7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 20px/1 "ghanachoco";
+        box-sizing: border-box;
+        cursor: pointer;
+
+        span {
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 0.6vw;
+          padding-top: 0.8vw;
+          margin-left: 2vw;
+        }
+
+        span:hover {
+          background-color: #59bdf0;
+          transition: 1.3s;
+        }
+      }
+
+      .coverGreen {
+        top: 0;
+        width: 100vw;
+        background-color: #d8fd12;
+        border: 1px solid #878787;
+        padding: 1rem;
+
+        .lineText5 {
+          color: #ff3796;
+          font: italic bold 1rem/1 "Playfair Display";
+        }
+      }
+    }
+
+    .barbie_inner {
+      padding: 3vw;
+
+      /* 오른쪽 페이지__메인글씨 */
+      &:nth-child(1) {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .mainText {
+        margin-top: -2vw;
+        width: 100%;
+        height: 30vw;
+        font: 15rem/1 "cloudBK";
+        text-align: center;
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+          12px 12px 0 var(--color-quinary);
+        text-transform: uppercase;
+        color: var(--color-primary);
+        animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+        letter-spacing: -0.4rem;
+      }
+      > p {
+        font: 1.1rem "ghanachoco";
+        text-align: center;
+        margin-top: 8vw;
+      }
+
+      /* 오른쪽 페이지__드라이기 */
+      .dryer {
+        position: relative;
+        width: 100%;
+        height: 50vw;
+
+        & img {
+          position: absolute;
+          transform: rotate (0deg);
+        }
+
+        > img {
+          width: 18vw;
+          top: -2vw;
+          left: -13vw;
+          transform: rotate(40deg);
+        }
+
+        .dollars {
+          height: 10vw;
+          > img:nth-child(1) {
+            width: 13vw;
+            top: 5vw;
+            left: 15vw;
+            transform: rotate(-10deg);
+          }
+          > img:nth-child(2) {
+            width: 12vw;
+            top: 12vw;
+            left: 12vw;
+            transform: rotate(-10deg);
+          }
+          > img:nth-child(3) {
+            width: 14vw;
+            top: 10vw;
+            left: 20vw;
+            transform: rotate(10deg);
+          }
+          > img:nth-child(4) {
+            width: 12vw;
+            top: 18vw;
+            left: 10vw;
+            transform: rotate(0deg);
+          }
+          > img:nth-child(5) {
+            width: 13vw;
+            top: 22vw;
+            left: 6vw;
+            transform: rotate(25deg);
+          }
+          > img:nth-child(6) {
+            width: 12vw;
+            top: 20vw;
+            left: 25vw;
+            transform: rotate(90deg);
+          }
+          > img:nth-child(7) {
+            width: 11vw;
+            top: 27vw;
+            left: 20vw;
+            transform: rotate(-20deg);
+          }
+          > img:nth-child(8) {
+            width: 14vw;
+            top: 30vw;
+            left: 10vw;
+            transform: rotate(40deg);
+          }
+          > img:nth-child(9) {
+            width: 13vw;
+            top: 8vw;
+            left: 30vw;
+            transform: rotate(0deg);
+          }
+          > img:nth-child(10) {
+            width: 12vw;
+            top: 20vw;
+            left: 34vw;
+            transform: rotate(10deg);
+          }
+          > img:nth-child(11) {
+            width: 10vw;
+            top: 30vw;
+            left: 32vw;
+            transform: rotate(-5deg);
+          }
+          > img:nth-child(12) {
+            width: 13vw;
+            top: 40vw;
+            left: 26vw;
+            transform: rotate(5deg);
+          }
+          > img:nth-child(13) {
+            width: 13vw;
+            top: 40vw;
+            left: 10vw;
+            transform: rotate(15deg);
+          }
+        }
+
+        .wind {
+          position: absolute;
+
+          > img:nth-child(1) {
+            width: 7vw;
+            top: -10vw;
+            left: 15vw;
+          }
+          > img:nth-child(2) {
+            width: 3vw;
+            top: 6vw;
+            left: 2vw;
+          }
+          > img:nth-child(3) {
+            width: 4vw;
+            top: 22vw;
+            left: 5vw;
+            transform: rotate(10deg);
+          }
+          > img:nth-child(4) {
+            width: 3vw;
+            top: 1vw;
+            left: 8vw;
+            transform: rotate(40deg);
+          }
+          > img:nth-child(5) {
+            width: 5vw;
+            top: -7vw;
+            left: 35vw;
+            transform: rotate(-40deg);
+          }
+        }
+      }
+      /* 오른쪽 페이지 등장인물 소개 */
+      > h2 {
+        margin: 5vw 0 2vw 0;
+        color: #fff;
+        font-weight: 900;
+        position: relative;
+        top: 5vw;
+        background-color: #0000;
+        text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,
+          0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+      }
+      .role {
+        width: 100%;
+        height: 15vw;
+        position: relative;
+        top: 6vw;
+        left: 0;
+        margin-bottom: 5vw;
+
+        .barbieRole {
+          width: 13vw;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .barbieRoleImg {
+            height: 250px;
+            background-image: url(/public/images//castBarbie.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #59bdf0;
+          }
+          > span {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,
+              0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+          }
+        }
+        .kenRole {
+          width: 13vw;
+          position: absolute;
+          top: 0;
+          left: 10vw;
+
+          .kenRoleImg {
+            height: 250px;
+            background-image: url(/public/images/castKen.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #59bdf0;
+          }
+          > span {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,
+              0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+          }
+        }
+
+        .director {
+          width: 13vw;
+          position: absolute;
+          top: 0;
+          left: 20vw;
+
+          .directorRoleImg {
+            height: 250px;
+            background-image: url(/public/images//castGretaGerwig.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #59bdf0;
+          }
+          > span {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,
+              0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+          }
+        }
+
+        .writer {
+          width: 13vw;
+          position: absolute;
+          top: 0;
+          left: 30vw;
+
+          .writerRoleImg {
+            height: 250px;
+            background-image: url(/public/images/castNoahBaumbach.webp);
+            background-position-x: -135px;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #59bdf0;
+          }
+          > span {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em #ff3796, 0.15em 0.15em #ff3796, 0.2em 0.2em #ff3796, 0.25em 0.25em #ff3796,
+              0.3em 0.3em #ff3796, 0.35em 0.35em #ff3796;
+          }
+        }
+      }
+    }
+
+    /* 오른쪽 페이지 줄거리 소개 */
+    .barbieStory {
+      position: relative;
+      top: 5vw;
+      height: 200vw;
+      width: 100%;
+      background-image: url(/public/images/bgCandy.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .year2000 {
+        width: 35vw;
+        position: absolute;
+        left: 15%;
+      }
+
+      .barbieImg {
+        top: 0;
+        left: 0;
+
+        > img {
+          position: absolute;
+          top: 2vw;
+          left: 3vw;
+        }
+        img:nth-of-type(1) {
+          width: 15vw;
+          left: 15vw;
+        }
+        img:nth-of-type(2) {
+          width: 15vw;
+          left: 33vw;
+        }
+        img:nth-of-type(3) {
+          width: 30vw;
+          top: 20vw;
+        }
+        img:nth-of-type(4) {
+          width: 15vw;
+          top: 30vw;
+          left: 28vw;
+        }
+        img:nth-of-type(5) {
+          width: 15vw;
+          height: 10vw;
+          top: 50vw;
+          left: 20vw;
+        }
+        img:nth-of-type(6) {
+          width: 15vw;
+          height: 10vw;
+          top: 50vw;
+        }
+      }
+    }
+
+    /* 마퀴 텍스트 효과 */
+    .coverPink1 {
+      width: 100vw;
+      background-color: #ff3796;
+      border: 1px solid #878787;
+      // display: flex;
+      padding: 1rem;
+      transform: rotate(355deg);
+      position: absolute;
+      left: -1vw;
+
+      .lineText1 {
+        color: #fff;
+        font: bold 1rem/1 "Playfair Display";
+        letter-spacing: 0.15rem;
+        display: flex;
+        font-style: italic;
+      }
+    }
+    .coverPink2 {
+      width: 100vw;
+      background-color: #ff3796;
+      border: 1px solid #878787;
+      display: flex;
+      padding: 1rem;
+      transform: rotate(5deg);
+      position: absolute;
+      left: -30vw;
+
+      .lineText2 {
+        color: #fff;
+        font: bold 1rem/1 "Playfair Display";
+        letter-spacing: 0.15rem;
+        justify-content: flex-end;
+        font-style: italic;
+      }
+    }
+    .coverGreen {
+      width: 100vw;
+      background-color: #d8fd12;
+      border: 1px solid #878787;
+      padding: 1rem;
+      position: relative;
+      top: 5vw;
+      z-index: 1;
+
+      .lineText3 {
+        color: #ff3796;
+        font: bold 1rem/1 "Playfair Display";
+        font-style: italic;
+      }
+    }
+    .coverGreen4 {
+      width: 100vw;
+      background-color: #d8fd12;
+      border: 1px solid #878787;
+      padding: 1rem;
+      position: relative;
+      top: 0vw;
+      z-index: 1;
+
+      .lineText4 {
+        color: #ff3796;
+        font: bold 1rem/1 "Playfair Display";
+        font-style: italic;
+      }
+    }
+  }
+
+  .topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00000067;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff67;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+      background-color: #ffffff67;
+      border: 1px solid #00000067;
+      color: black;
+    }
+  }
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
