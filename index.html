@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieFesta</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- js -->
+    <script defer src="./js/main.js"></script>
+    <!-- SWIPER     -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- scroll css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- scroll js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b562f25204.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- 왼쪽 페이지 -->
+    <div class="half">
+      <h1>Movie Festa</h1>
+      <img
+        src="https://media.giphy.com/media/UVs0G2jhLCXYI/giphy.gif"
+        alt="트로피"
+      />
+    </div>
+    <!-- 오른쪽 페이지 -->
+    <div class="half2">
+      <!-- 오른쪽 페이지 헤더 -->
+      <header class="common_header">
+        <nav>
+          <ul class="main_nav">
+            <li><a href="/index.html"> HOME</a></li>
+            <li><a href="/page/movie1.html">2022</a></li>
+            <li><a href="/sujiFesta/barbie.html">2021</a></li>
+            <li><a href="/page/Frequently/frequently.html">F&Q</a></li>
+          </ul>
+          <ul class="sub_nav">
+            <a href="/page/Ticket/ticket.html"><span>Ticket</span></a>
+          </ul>
+        </nav>
+      </header>
+      <!-- 띠 -->
+      <div class="coverPink">
+        <p class="lineText1"></p>
+      </div>
+      <!-- 오른쪽 페이지 본문 -->
+      <section class="inner">
+        <div class="title">
+          <div class="festa">
+            <span style="--i: 1">A</span>
+            <span style="--i: 2">U</span>
+            <span style="--i: 3">G</span>
+            <span style="--i: 4">U</span>
+            <span style="--i: 5">S</span>
+            <span style="--i: 6">T</span><br />
+            <span style="--i: 7">2</span>
+            <span style="--i: 8">0</span>
+            <span style="--i: 9">2</span>
+            <span style="--i: 10">2</span>
+          </div>
+        </div>
+        <div class="intro" data-aos="zoom-in">
+          <h1>
+            <span
+              >무비페스타(Movie Festa)는 매년 가을 서울 도화동에서 개최되는
+              영화축제이다. 서울에서 개최하는 가장 큰 영화축제중 하나로 매년
+              많은 볼거리와 먹거리를 제공하고 있다. 이번 축제에서는 2022년와
+              2021년의 베스트 영화소개와 더불어 상영회를 시행한다. 이번 영화제는
+              전세계적인 흥행작들로 구성하여 더욱 풍성하게 영화축제를 즐길 수
+              있을 것으로 기대된다.
+            </span>
+          </h1>
+        </div>
+        <div class="promotion">
+          <h1>Awards For Best Movie</h1>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="/Dun/index.html"
+                  ><img src="./img/dune.jpeg" alt="듄"
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/lala/index.html"
+                  ><img src="./img/lalaland.jpeg" alt="라라랜드"
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/sujiFesta/hotel.html"
+                  ><img
+                    src="./img/grandhotel.jpeg"
+                    alt="그랜드 부다페스트 호텔"
+                /></a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="promotion_info">
+          <p>
+            <i class="fa-solid fa-asterisk"></i>&nbsp;포스터 클릭시 해당
+            영화페이지로 이동합니다.
+          </p>
+        </div>
+        <!-- 띠 -->
+        <div class="moving__page">
+          <p><a href="/page/movie1.html">OPENING FILM</a></p>
+          <p><a href="/sujiFesta/barbie.html">CLOSING FILM</a></p>
+          <p class="fq"><a href="/page/Frequently/frequently.html">F&Q</a></p>
+        </div>
+      </section>
+      <!-- 띠 -->
+      <div class="coverPink">
+        <p class="lineText2"></p>
+      </div>
+    </div>
+    <div class="topBtn" onclick="window.scrollTo(0,0);">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>WANT TO GET OUR LINEUP DROPS BEFORE ANYONE ELSE?</p>
+        <input type="text" placeholder="메일을 입력하세요." />
+        <a href="#">YES PLEASE</a>
+      </div>
+      <p>©2022 MOVIE FESTA</p>
+    </footer>
+  </body>
+</html>
