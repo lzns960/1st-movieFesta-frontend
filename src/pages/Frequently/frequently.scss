@@ -1,0 +1,313 @@
+/* FONTS */
+@font-face {
+  font-family: "soul";
+  src: url(../font/soul-handwriting_free-version.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "cloud";
+  src: url(../font/MCKLW___.ttf) format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+// font-family: 'Ubuntu', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+// font-family: 'Josefin Sans', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+// font-family: 'BhuTuka Expanded One', cursive;
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// bg color
+// yellow #fce52b pink #f5b5c7 blue #59bdf0 #eae3d2 #e8aa42
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #e6cca9;
+
+  .half {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 1;
+    border-right: 1px solid #000;
+
+    h1 {
+      position: absolute;
+      font: 7.5rem/1 "soul";
+      top: 24vw;
+      left: 2vw;
+      color: #fff;
+      text-shadow: 10px 10px 15px #000;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .half2 {
+    font-family: "NEXON Lv1 Gothic OTF";
+
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .common_header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 15vh;
+      color: #000;
+
+      nav {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      }
+
+      .main_nav {
+        width: 70%;
+        padding: 0.7vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 30px/1 "Josefin Sans";
+        cursor: pointer;
+
+        li {
+          text-align: center;
+          flex-basis: 100px;
+        }
+      }
+
+      .main_nav li:hover {
+        transform: scale(1.2);
+        font-weight: 500;
+      }
+
+      .sub_nav {
+        width: 7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 20px/1 "Josefin Sans";
+        box-sizing: border-box;
+        cursor: pointer;
+
+        span {
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 0.7vh;
+          padding-top: 1vh;
+        }
+
+        span:hover {
+          background-color: #9bc8f2;
+          transition: 1.3s;
+        }
+
+        .lang:hover {
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+    }
+
+    .coverPink {
+      width: 100vw;
+      background-color: #c69b7b;
+
+      // border: 1px solid #878787;
+
+      .lineText1 {
+        transform: rotate(-2deg);
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font: bold 1rem/1 "Josefin Sans";
+      }
+    }
+
+    .inner {
+      .title {
+        width: 100%;
+        font-size: 50px;
+        margin: 5vw 3vw;
+      }
+
+      .intro {
+        margin-top: 50px;
+
+        .ticket {
+          margin-top: 10vw;
+
+          p {
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 3vw;
+          }
+
+          ul {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 20px;
+
+            li {
+              display: flex;
+              justify-content: space-between;
+              padding: 2.4vw 3vw;
+              border-bottom: 1px solid white;
+              cursor: pointer;
+
+              // &:nth-child(6) {
+              //   border: none;
+              // }
+
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.303);
+              }
+            }
+          }
+        }
+
+        .where.off {
+          display: none;
+        }
+
+        .where.on {
+          display: block;
+          .content_inner {
+            padding: 2vw 3vw;
+
+            p {
+              font-size: 20px;
+              font-weight: normal;
+              line-height: 32px;
+            }
+          }
+        }
+
+        .bmw {
+          margin-top: 5vw;
+          margin-bottom: 5vw;
+
+          p {
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 3vw;
+          }
+
+          ul {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 20px;
+
+            li {
+              display: flex;
+              justify-content: space-between;
+              padding: 2.4vw 3vw;
+              border-bottom: 1px solid white;
+              cursor: pointer;
+
+              &:nth-child(5) {
+                border: none;
+              }
+
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.303);
+              }
+            }
+          }
+        }
+      }
+
+      .topBtn {
+        position: fixed;
+        bottom: 50px;
+        right: 10px;
+        background-color: #c58518;
+        color: white;
+        font-size: 30px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #ffffff67;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ffffff67;
+          border: 1px solid #00000067;
+          color: black;
+        }
+      }
+    }
+    .coverPink {
+      width: 100vw;
+
+      // border: 1px solid #878787;
+
+      .lineText2 {
+        background-color: #c69b7b;
+        transform: rotate(-2deg);
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font: bold 1rem/1 "Josefin Sans";
+      }
+    }
+  }
+
+  .topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00000067;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff67;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff67;
+      border: 1px solid #00000067;
+      color: black;
+    }
+  }
+}
