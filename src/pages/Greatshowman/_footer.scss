@@ -1,0 +1,46 @@
+footer {
+  width: 100%;
+  margin-top: 7000px;
+
+  .footer {
+    p {
+      font-size: 25px;
+      color: white;
+    }
+
+    input {
+      box-sizing: border-box;
+      margin-top: 25px;
+      padding-left: 10px;
+      width: 100%;
+      height: 50px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      font-size: 25px;
+    }
+
+    a {
+      display: inline-block;
+      text-align: center;
+      width: 150px;
+      margin-top: 30px;
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+  > p {
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+  }
+}

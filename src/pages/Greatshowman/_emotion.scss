@@ -1,0 +1,136 @@
+.title {
+  position: fixed;
+  top: 5vh;
+  left: 67%;
+  font-size: 100px;
+  color: white;
+}
+
+.title.first {
+  display: block;
+  letter-spacing: 30px;
+  font-weight: 800;
+  background-size: contain;
+  color: transparent;
+  background-image: url("https://media.giphy.com/media/RIWkpfrOrX0DxP3m3q/giphy.gif");
+  -webkit-background-clip: text;
+}
+
+// 핵심 감정 부분 좌우 스크롤
+.emotion_contents {
+  margin-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 100px 0;
+  position: fixed;
+  background-color: red;
+
+  .container {
+    display: flex;
+    position: fixed;
+    width: 50%;
+    top: 5vw;
+    left: 50%;
+    height: 600px;
+    // background-color: red;
+
+    img {
+      width: 500px;
+      height: 100%;
+    }
+
+    p {
+      font-family: "Work Sans";
+      color: transparent;
+      background-size: contain;
+      -webkit-background-clip: text;
+      background-image: url("https://media.giphy.com/media/RIWkpfrOrX0DxP3m3q/giphy.gif");
+    }
+
+    .emotion__family {
+      position: relative;
+
+      .family_img {
+        border-top-left-radius: 300px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 500px;
+        border-bottom-left-radius: 200px;
+      }
+
+      p {
+        position: absolute;
+        top: 20vh;
+        right: -10vw;
+        font-size: 100px;
+      }
+    }
+
+    .emotion__love {
+      position: relative;
+
+      .love_img {
+        border-top-left-radius: 150px;
+        border-top-right-radius: 460px;
+        border-bottom-right-radius: 300px;
+        border-bottom-left-radius: 300px;
+      }
+
+      p {
+        position: absolute;
+        top: 5vh;
+        right: -5vw;
+        font-size: 100px;
+      }
+    }
+
+    .emotion__bro {
+      position: relative;
+
+      .bro_img {
+        border-top-left-radius: 300px;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 1000px;
+        border-bottom-left-radius: 1000px;
+      }
+      p {
+        position: absolute;
+        top: 20vh;
+        right: -10vw;
+        font-size: 80px;
+      }
+    }
+
+    .emotion__nofamily {
+      position: relative;
+      .nofamily_img {
+        border-top-left-radius: 630px;
+        border-top-right-radius: 300px;
+        border-bottom-right-radius: 400px;
+        border-bottom-left-radius: 900px;
+      }
+
+      p {
+        position: absolute;
+        top: 3vh;
+        right: 15vw;
+        font-size: 80px;
+      }
+    }
+
+    .emotion__sucess {
+      position: relative;
+      .sucess_img {
+        border-top-left-radius: 400px;
+        border-top-right-radius: 800px;
+        border-bottom-right-radius: 400px;
+        border-bottom-left-radius: 700px;
+      }
+      p {
+        position: absolute;
+        top: 5vh;
+        right: -20vw;
+        font-size: 80px;
+      }
+    }
+  }
+}

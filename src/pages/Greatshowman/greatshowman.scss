@@ -1,0 +1,221 @@
+@import "reset";
+@import "keyframes";
+// font-family: 'Josefin Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "soul";
+  src: url(/assets/fonts/soul-handwriting_free-version.ttf) format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap");
+// font-family: 'Work Sans', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+// font-family: 'Playfair Display', serif;
+// yellow #fce52b pink #f5b5c7 blue #59bdf0
+
+@font-face {
+  font-family: "HSBombaram3_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  background-color: black;
+
+  .half {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: calc(50% + 1px);
+    width: 50%;
+    z-index: 1;
+    border-right: 1px solid #000;
+
+    h1 {
+      position: absolute;
+      font: 120px/1 "soul";
+      top: 3vw;
+      left: 2vw;
+    }
+  }
+
+  .half2 {
+    position: absolute;
+    width: 50%;
+    background-color: black;
+    left: 50%;
+    top: 0;
+
+    .common_header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 15vh;
+      color: white;
+
+      nav {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+
+        .main_nav {
+          width: 70%;
+          padding: 0.7vh;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font: 30px/1 "HSBombaram3_Regular";
+          cursor: pointer;
+
+          li {
+            text-align: center;
+            flex-basis: 100px;
+
+            a {
+              color: white;
+            }
+          }
+        }
+
+        .main_nav li:hover {
+          transform: scale(1.5);
+          font-weight: 500;
+        }
+
+        .sub_nav {
+          width: 7vw;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font: 20px/1 "HSBombaram3_Regular";
+          box-sizing: border-box;
+
+          span {
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 0.7vh;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .inner {
+      padding: 3vw;
+
+      .content {
+        width: 100%;
+        box-sizing: border-box;
+
+        // @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+
+        .main_text {
+          text-align: center;
+          margin-top: 40px;
+          height: 60vh;
+          font-weight: bold;
+          font-size: 200px;
+          color: white;
+
+          span {
+            font-family: "HSBombaram3_Regular";
+            transform: scale(0.9, 1) rotatey(-10deg) translatey(0px);
+            animation: 2.2s scaling cubic-bezier(0.45, 0, 0.55, 1) infinite;
+            text-shadow: 0 0 #a20a0a, 0 0 #799351, 0 0 #f0d290;
+            transform-origin: 50% 100%;
+            color: #fff;
+            position: relative;
+            top: 10%;
+            transform-style: preserve-3d;
+            margin-right: 4px;
+            @for $i from 1 through 5 {
+              &:nth-child(#{$i}) {
+                animation-delay: 140ms * $i;
+              }
+            }
+          }
+        }
+
+        html {
+          width: 100%;
+          height: 100vh;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100vh;
+          box-sizing: border-box;
+          display: grid;
+          place-items: center;
+          overflow: hidden;
+          background: #f69294;
+        }
+
+        p {
+          font-family: "HSBombaram3_Regular";
+          padding-top: 50px;
+          text-align: center;
+          line-height: 1.5;
+          color: white;
+          font-size: bold;
+        }
+      }
+
+      // 젠다이아 움직이는 부분
+      .move_content {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 100px;
+
+        #move_main {
+          width: 100%;
+          position: relative;
+        }
+
+        #move_jan {
+          position: absolute;
+          left: -5%;
+          width: 350px;
+          animation: rotate_jan 2.5s linear infinite;
+          transform-origin: top;
+        }
+      }
+      @import "emotion";
+      @import "ost";
+      @import "footer";
+    }
+  }
+  .topBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    background-color: #00000067;
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff67;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff67;
+      border: 1px solid #00000067;
+      color: black;
+    }
+  }
+}

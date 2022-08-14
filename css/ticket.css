@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap");
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "soul";
+  src: url(/assets/fonts/soul-handwriting_free-version.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  position: relative;
+}
+body .common_header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #c8c8c8;
+  padding: 50px;
+}
+body .common_header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+body .common_header nav .main_nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px;
+  height: 50px;
+}
+body .common_header nav .main_nav li {
+  text-align: center;
+  padding: 0;
+}
+body .common_header nav .main_nav li:hover {
+  border-bottom: 5px solid black;
+}
+body .common_header nav .sub_nav {
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+}
+body .common_header nav .sub_nav .lang {
+  color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://thumbs.gfycat.com/NauticalSandyHippopotamus-max-1mb.gif");
+  -webkit-background-clip: text;
+}
+body .common_header nav .sub_nav .lang.kr {
+  display: none;
+}
+body .common_header nav .sub_nav .kr.show {
+  display: block;
+  background-size: cover;
+  background-image: url("https://thumbs.gfycat.com/VigorousReflectingAsianelephant-size_restricted.gif");
+  -webkit-background-clip: text;
+}
+body .common_header nav .sub_nav span {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.7vh;
+  padding-top: 1vh;
+}
+body .inner {
+  background-color: white;
+  margin: 0 10vw;
+  height: 3000px;
+}
+body .inner .title {
+  height: 17vh;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+body .inner .title > p {
+  font-size: 50px;
+  font-weight: bold;
+}
+body .inner .title .title_detail {
+  display: flex;
+  padding-top: 10px;
+}
+body .inner .title .title_detail #title_date {
+  padding-right: 10px;
+  border-right: 2px solid black;
+}
+body .inner .title .title_detail #title_location {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+body .inner .information {
+  display: flex;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 2px solid black;
+}
+body .inner .information .poster {
+  width: 400px;
+  margin-right: 50px;
+}
+body .inner .information .poster img {
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+body .inner .information .poster i {
+  font-size: 30px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+body .inner .information .poster i.likeColor {
+  color: red;
+}
+body .inner .information .poster p {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+}
+body .inner .information .poster span {
+  font-size: 30px;
+}
+body .inner .information .information_detail {
+  width: 1000px;
+  height: 500px;
+}
+body .inner .information .information_detail ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+}
+body .inner .information .information_detail ul li {
+  height: 70px;
+}
+body .inner .information .information_detail ul li .list {
+  display: flex;
+  position: relative;
+}
+body .inner .information .information_detail ul li .list .detail__title {
+  font-weight: bold;
+  padding-right: 100px;
+}
+body .inner .information .information_detail ul li .list .detail__title.time {
+  padding-right: 60px;
+}
+body .inner .information .information_detail ul li .list .detail__content {
+  margin-left: 15px;
+}
+body .inner .information .information_detail ul li .list .detail__content i {
+  cursor: pointer;
+}
+body .inner .information .information_detail ul li .list .instalment {
+  display: none;
+}
+body .inner .information .information_detail ul li .list .instalment.showPop {
+  display: block;
+  position: absolute;
+  top: 35px;
+  width: 60%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  z-index: 3;
+}
+body .inner .information .information_detail ul li .list .instalment.showPop .pop_title {
+  color: rgb(123, 196, 13);
+  font-size: 30px;
+  font-weight: bold;
+}
+body .inner .information .information_detail ul li .list .instalment.showPop table {
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid black;
+  margin-top: 15px;
+}
+body .inner .information .information_detail ul li .list .instalment.showPop table tbody td {
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 1px solid darkgray;
+}
+body .inner .information .information_detail ul li .list .instalment.showPop .unuse {
+  padding: 20px;
+  font-size: 17px;
+  color: rgb(103, 101, 101);
+}
+body .inner .information .information_detail ul li.price {
+  height: 120px;
+  margin-bottom: 20px;
+}
+body .inner .information .information_detail ul li.price .list ul {
+  width: 80%;
+  height: 120px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background-color: #f7f4f4;
+}
+body .inner .information .information_detail ul li.price .list ul li {
+  height: 50px;
+}
+body .inner .buy_ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+body .inner .buy_ticket .btn {
+  width: 300px;
+  height: 70px;
+  line-height: 70px;
+  background-color: red;
+  font-size: 25px;
+}
+body .inner .buy_ticket .btn:hover {
+  cursor: pointer;
+}
+body .inner .buy_ticket .koBtn {
+  background-color: #f53041;
+  margin-right: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+body .inner .buy_ticket .gbBtn {
+  background-color: white;
+  border: 3px solid #f53041;
+  text-align: center;
+}
+body .inner .buy_ticket #modal.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 12, 12, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window {
+  background: white;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 40vw;
+  height: 60vh;
+  top: 15%;
+  position: fixed;
+  padding: 20px;
+  text-align: center;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .modal-header h2 {
+  font-size: 0px;
+  margin-left: 350px;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .modal-header .close-area {
+  display: inline-block;
+  padding-right: 10px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px gray;
+  font-size: 25px;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window p {
+  background-color: rgba(249, 178, 178, 0.416);
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  color: #f53041;
+  margin: 30px 0;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type .ticket_type {
+  width: 120px;
+  height: 130px;
+  border: 2px solid rgb(137, 137, 137);
+  color: rgb(137, 137, 137);
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 30px;
+  line-height: 130px;
+  text-align: center;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type .ticket_type:hover {
+  border: 3px solid darkgreen;
+  color: black;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type:hover {
+  cursor: pointer;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 5vh;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount i {
+  color: darkgray;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount .tickt_amount {
+  padding: 0 20px;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_button {
+  background-color: darkgreen;
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 8.5vw;
+  margin-top: 5vh;
+  cursor: pointer;
+}
+body .inner .banner {
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  background-color: cornflowerblue;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+body .inner .banner:hover {
+  cursor: pointer;
+}
+body .inner .banner p {
+  font-size: 3rem;
+  color: white;
+}
+body .inner .banner p span {
+  color: yellow;
+  font-weight: bold;
+}
+body .inner .content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 100px;
+  border-bottom: 2px solid black;
+}
+body .inner .content div {
+  width: 240px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+body .inner .content_detail {
+  border-top: 5px solid palevioletred;
+}
+body .inner .detail_page.off {
+  display: none;
+}
+body .inner .detail_page {
+  width: 100%;
+  display: block;
+}
+body .inner .detail_page .page {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+body .inner .detail_page .detail__info {
+  width: 100%;
+}
+body .inner .detail_page .detail__info .notice p {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+body .inner .detail_page .detail__info .notice span {
+  font-size: 20px;
+  color: black;
+}
+body .inner .detail_page .detail__info .discount {
+  margin-top: 100px;
+}
+body .inner .detail_page .detail__info .discount p {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+body .inner .detail_page .detail__info .discount span {
+  font-size: 20px;
+  color: black;
+}
+body .inner .detail_page .detail__info .movie_info {
+  margin-top: 100px;
+}
+body .inner .detail_page .detail__info .movie_info p {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+body .inner .detail_page .detail__info .movie_info .info_see {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 100px;
+}
+body .inner .detail_page .detail__info .movie_info .info_see .see_title {
+  font-size: 70px;
+  color: #f9d923;
+}
+body .inner .detail_page .detail__info .movie_info .info_see .see_subtitle {
+  font-weight: 500;
+}
+body .inner .detail_page .detail__info .movie_info .info_see img {
+  width: 400px;
+}
+body .inner .detail_page .detail__info .movie_info .info_food {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 100px;
+}
+body .inner .detail_page .detail__info .movie_info .info_food .food_title {
+  font-size: 70px;
+  color: #36ae7c;
+}
+body .inner .detail_page .detail__info .movie_info .info_food .food_subtitle {
+  font-weight: 500;
+}
+body .inner .detail_page .detail__info .movie_info .info_food img {
+  width: 800px;
+  height: 500px;
+}
+body .inner .detail_page .detail__info .movie_info .info_clothes {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 100px;
+}
+body .inner .detail_page .detail__info .movie_info .info_clothes .clothes_title {
+  font-size: 70px;
+  color: #187498;
+}
+body .inner .detail_page .detail__info .movie_info .info_clothes .clothes_subtitle {
+  font-weight: 500;
+}
+body .inner .detail_page .detail__info .movie_info .info_clothes img {
+  width: 800px;
+}
+body .inner .cancel_page {
+  display: none;
+}
+body .inner .cancel_page.showCancel {
+  width: 100%;
+  display: block;
+}
+body .inner .cancel_page.showCancel .page {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+body .inner .cancel_page.showCancel .cancel__info {
+  width: 100%;
+}
+body .inner .cancel_page.showCancel .cancel__info .cancel_notice table {
+  width: 100%;
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+body footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body footer .footer_contents {
+  text-align: center;
+  padding: 50px 0;
+}
+body footer .footer_contents ul {
+  display: flex;
+  padding-bottom: 10px;
+}
+body footer .footer_contents ul li {
+  color: black;
+  font-size: 22px;
+  padding: 0 30px;
+  border-right: 2px solid #c8c8c8;
+}
+body footer .footer_contents ul li:nth-child(1) {
+  padding-left: 0;
+}
+body footer .footer_contents ul li:nth-child(6) {
+  border-right: none;
+}
+body footer .footer_contents .footer_detail {
+  width: 100%;
+  padding-bottom: 30px;
+}
+body footer .footer_contents .footer_detail ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+body footer .footer_contents .footer_detail ul li:nth-child(3) {
+  border-right: none;
+}
+body .topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.4039215686);
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4039215686);
+  cursor: pointer;
+}
+body .topBtn:hover {
+  background-color: rgba(255, 255, 255, 0.4039215686);
+  border: 1px solid rgba(0, 0, 0, 0.4039215686);
+  color: black;
+}
+
+/*# sourceMappingURL=ticket.css.map */

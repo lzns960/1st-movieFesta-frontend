@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>티켓예매</title>
+    <link rel="stylesheet" href="/css/ticket.css" />
+    <script src="https://kit.fontawesome.com/8f941869ba.js" crossorigin="anonymous"></script>
+  <script defer src="./ticket.js"></script>
+  </head>
+  <body>
+    <header class="common_header">
+      <nav>
+        <ul class="main_nav">
+          <li><a href="/index.html"> HOME</a></li>
+          <li><a href="/page/movie1.html">2022</a></li>
+          <li><a href="/sujiFesta/barbie.html">2021</a></li>
+          <li><a href="/page/Frequently/frequently.html">F&Q</a></li>
+        </ul>
+        <ul class="sub_nav">
+          <li class="lang">EN</li>
+          <li class="lang kr">KR</li>
+          <li>
+            <a href="/page/Ticket/ticket.html"><span>Ticket</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+      <section>
+        <div class="inner">
+          <!-- TITTLE -->
+          <div class="title">
+          <p>2022 MOVIE FESTA</p>
+          <div class="title_detail">
+            <p id="title_date">2022.05.25</p>
+            <p id="title_location">서울 도화동
+              <i class="fa-solid fa-location-dot"></i>
+            </p>
+          </div>
+          </div>
+          <!-- INFORMATION-->
+          <div class="information">
+            <div class="poster">
+              <img src="/public/images/ticket_poster.png"  style="height: 90%;" alt="축제포스터">
+              <i class="fa-solid fa-heart" id="likeBtn"></i>
+              <p id="likeNum">23</p>
+              <span>Likes</span>
+            </div>
+            <div class="information_detail">
+              <ul>
+                <li>
+                  <div class="list">
+                  <p class="detail__title">등급</p>
+                  <p class="detail__content">10세 이상</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list">
+                  <p class="detail__title time">관람시간</p>
+                  <p class="detail__content">520분</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list">
+                  <p class="detail__title">출연</p>
+                  <p class="detail__content">Tetz</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list">
+                  <p class="detail__title">장르</p>
+                  <p class="detail__content">축제</p>
+                  </div>
+                </li>
+                <li class="price">
+                  <div class="list">
+                    <p class="detail__title">가격</p>
+                    <p class="detail__content" >
+                      <ul>
+                        <li>오전권 - 10000원</li>
+                        <li>오후권 - 25000원</li>
+                        <li>종일권 - 30000원</li>
+                      </ul>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="list">
+                    <p class="detail__title">혜택</p>
+                    <div class="pop instalment">
+                      <p class="pop_title">무이자 할부</p>
+                      <table>
+                        <tbody>
+                        <tr>
+                          <td>삼성카드</td>
+                          <td>2~6개월</td>
+                          <td>5만원 이상 결제시</td>
+                        </tr>
+                        <tr>
+                          <td>롯데카드</td>
+                          <td>2~12개월</td>
+                          <td>10만원 이상 결제시</td>
+                        </tr>
+                        <tr>
+                          <td>현대카드</td>
+                          <td>2~7개월</td>
+                          <td>5만원 이상 결제시</td>
+                        </tr>
+                        <tr>
+                          <td>국민카드</td>
+                          <td>2~5개월</td>
+                          <td>5만원 이상 결제시</td>
+                        </tr>
+                        <tr>
+                          <td>신한카드</td>
+                          <td>2~6개월</td>
+                          <td>5만원 이상 결제시</td>
+                        </tr>
+                      </tbody>
+                      </table>
+                      <p class="unuse">법인카드, 체크카드, 기프트카드 제외</p>
+                    </div>
+                    <div class="pop card"></div>
+                    <p class="detail__content">무이자할부 
+                      <i class="fa-solid fa-circle-chevron-down" id="btn_instalment"></i>
+                    </p>
+                    <p class="detail__content"> 제휴카드할인 
+                      <i class="fa-solid fa-circle-chevron-down"></i>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- BUY -->
+          <div class="buy_ticket">
+            <div class="btn koBtn" onclick="modalOn()">예매하기</div>
+                <!-- MODAL -->
+
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="modal-header">
+            <h2>예매</h2>
+            <span class="close-area"><i class="fa-solid fa-x"></i></span>
+        </div>
+        <!-- <h2>티켓종류를 선택하세요.</h2> -->
+        <p>취소/환불 규정을 반드시 확인하세요.</p>
+
+        <div class="content_type">
+          <div class="ticket_type sun">오전권</div>
+          <div class="ticket_type night">오후권</div>
+          <div class="ticket_type allday">종일권</div>
+        </div>
+        <div class="content_amount">
+          <i class="fa-solid fa-circle-minus"></i>
+          <div class="tickt_amount">1</div>
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+        <div class="content_button" onclick="alert('구매가 완료 되었습니다.')">구매하기</div>
+      </div>
+  </div>
+            <div class="btn gbBtn">GLOBAL BOOKING</div>
+          </div>
+          <!-- BANNER -->
+          <div class="banner">
+            <p>우리는 가끔 현실을 벗어나고 싶으니깐,
+                <span>SNS 팔로우 이벤트</span>
+            </p>
+          </div>
+          <!-- CONTENT -->
+          <div class="content">
+            <div class="content_detail">상세정보</div>
+            <div class="content_cancel">예매/취소안내</div>
+          </div>
+          <!-- DETAILPAGE -->
+          <div class="detail_page on">
+            <div class="page detail__info">
+              <div class="notice">
+                <p>유의사항</p>
+                <span>※ 본 상품은 문화비 소득공제 제외 상품입니다.</span>
+                <br/>
+                <span>※ 본 공연은 꿈틀이 쿠폰이 적용되지 않습니다.</span>
+              </div>
+              <div class="discount">
+                <p>할인정보</p>
+                <span>■ 판매 일정 : 12월 24일(월) 10:00 ~ 12월 24일(월) 21:59</span>
+                <br/>
+                <span style="color: red;">※ KDT수료생: 10% 할인</span>
+                <br/>
+                <span>※ 지역주민: 10% 할인</span>
+              </div>
+              <div class="movie_info">
+                <p>공연정보</p>
+                <div class="info_see">
+                  <p class="see_title">
+                    우리 동네, 우리 주민 PICK!<br/>
+                    영화를 경험한다!
+                  </p>
+                  <p class="see_subtitle">
+                    우리 동네 선정 연도별 영화를 감상할 수 있습니다.
+                  </p>
+                  <img src="https://upload.wikimedia.org/wikipedia/ko/c/cd/%EC%9C%84%EB%8C%80%ED%95%9C_%EC%87%BC%EB%A7%A8.jpg" alt="위대한쇼맨 포스터">
+                  <img src="/public/images/barbie_poster.jpeg"  style="height: 570px;"alt="바비 포스터">
+                <img src="https://www.themoviedb.org/t/p/original/Dtwad1HQv3jc2f54QQQHJ1VZ1W.jpg" alt="둔 포스터">
+                <img src="https://t1.daumcdn.net/movie/0e371de6f342a66143c49af3dd2b204342bbb5aa" alt="라라랜드 포스터">
+                <img src="https://cdn.news.hoseo.ac.kr/news/photo/202010/202_177_196.jpg" alt="그랜드부다패스트호텔 포스터">
+                </div>
+                <div class="info_food">
+                  <p class="food_title">
+                    필름! 낼름!<br/>
+                    영화 속 음식을 먹어본다!
+                  </p>
+                  <p class="food_subtitle">
+                    등장인물들이 먹었던 음식들을 직접 맛볼 수 있습니다.
+                  </p>
+                  <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDVfMjQg/MDAxNTIwMTc5NDQyMDY2.7tJfMQ3rZTAtPqAd0MN9ZkqmX37o_PzFzJ4GkbVcgd0g.GCF8NBclFC3a1JSkMCsjP6JnQ-x4xBwfsyBWLgXZlFgg.JPEG.wlsghsmreo2/%EC%9C%84%EB%8C%80%ED%95%9C_%EC%87%BC%EB%A7%A8_%EC%88%A0_%EC%9E%A5%EB%A9%B4.jpg?type=w800" alt="">
+                  <img src="https://mblogthumb-phinf.pstatic.net/MjAxNjEyMTZfMTkg/MDAxNDgxODYyNzY4MTA1.kDwPpAOSd9RX3Gm12zPM2r7VgQfqoMCpUgGat3rJpDog.vgxEZMX3TVIeVPCQ--cNWfbfUVi1hVNHvn_Y2iA4ZT0g.JPEG.duraduracell/bd1b8cf27d4bec37f256808afe13c50f.jpg?type=w800" alt="">                </div>
+                <div class="info_clothes">
+                  <p class="clothes_title">
+                    오늘은 내가 주인공!<br/>
+                    의상, 무대, 도구 모두 챙기세요!
+                  </p>
+                  <p class="clothes_subtitle">
+                    주요 장면 속 등장인물이 되어 볼 수 있습니다.
+                  </p>
+                  <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99CDD1355C60BA2D2A" alt="">
+                <img src="https://dvdprime.com/g2/data/cheditor5/2111/view_thumbnail/mania-done-20211116104723_tlwmpbll.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+         <!-- CANCELPAGE -->
+         <div class="cancel_page on">
+          <div class="page cancel__info">
+            <div class="cancel_notice">
+            
+              <table>
+                <tbody>
+                <tr>
+                  <td>취소수수료</td>
+                  <td>관람일 9일 전 ~ 관람일 7일 전까지</td>
+                  <td>티켓 금액의 10%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>관람일 6일 전 ~ 관람일 3일 전까지	</td>
+                  <td>티켓 금액의 20%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>관람일 2일 전 ~ 취소마감일시까지	</td>
+                  <td>티켓 금액의 30%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>예매 후 7일 이내</td>
+                  <td>수수료없음</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>   
+        <!-- FOOTER -->
+        <footer>
+          <div class="footer_contents">
+            <ul>
+              <li>회사소개</li>
+              <li>이용약관</li>
+              <li>개인정보처리방침</li>
+              <li>청소년보호정책</li>
+              <li>이용안내</li>
+              <li>티켓판매안내</li>
+            </ul>
+            <div class="footer_detail">
+                <ul>
+                  <li>(주) 윤비씨박수치세영</li>
+                  <li>서울시 마포구 도화동</li>
+                  <li>© KDT 1ST PROJECT</li>
+                </ul>
+            </div>
+            <span>Copyright © KDT Corp. All Rights Reserved.</span>
+          </div>
+        </footer>
+      </section>
+      <!-- UPBTN -->
+      <div class="topBtn" onclick="window.scrollTo(0,0);">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+  </body>
+</html>
