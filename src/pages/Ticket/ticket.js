@@ -80,13 +80,33 @@ function isModalOn() {
   return modal.style.display === "flex";
 }
 
-const btnModal = document.getElementById("btn-modal");
-btnModal.addEventListener("click", e => {
-  modalOn();
-});
+// const btnModal = document.getElementById("btn-modal");
+// btnModal.addEventListener("click", e => {
+//   modalOn();
+// });
 
-window.addEventListener("keyup", e => {
-  if (isModalOn() && e.key === "Escape") {
-    modalOff();
+// window.addEventListener("keyup", e => {
+//   if (isModalOn() && e.key === "Escape") {
+//     modalOff();
+//   }
+// });
+
+const sunBtn = document.querySelector(".sun");
+const nightBtn = document.querySelector(".night");
+const alldayBtn = document.querySelector(".allday");
+const plusBtn = document.querySelector(".fa-circle-plus");
+const buyBtn = document.querySelector(".content_button");
+
+sunBtn.addEventListener("click", function () {
+  if (sunBtn.classList.contains("check")) {
+    sunBtn.classList.remove("check");
+    plusBtn.style.color = "lightgray";
+    buyBtn.classList.remove("active");
+  } else {
+    sunBtn.classList.add("check");
+    plusBtn.style.color = "black";
+    buyBtn.classList.add("active");
   }
 });
+
+let before = -1;

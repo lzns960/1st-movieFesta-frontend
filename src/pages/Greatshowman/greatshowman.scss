@@ -52,6 +52,7 @@ body {
   }
 
   .half2 {
+    overflow-x: hidden;
     position: absolute;
     width: 50%;
     background-color: black;
@@ -101,16 +102,37 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          font: 20px/1 "HSBombaram3_Regular";
+          font: 1.4rem/1 "Josefin Sans";
           box-sizing: border-box;
+          cursor: pointer;
 
           span {
             border: 1px solid white;
             border-radius: 10px;
-            padding: 0.7vh;
+            padding: 0.4vw;
+            padding-top: 0.6vw;
             color: white;
+            margin-left: 4vw;
+          }
+
+          span:hover {
+            background-color: #a20a0a;
+            transition: 1.3s;
           }
         }
+      }
+    }
+
+    .coverPink {
+      width: 100vw;
+      background-color: #a20a0a;
+
+      .lineText1 {
+        transform: rotate(-2deg);
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font: bold 1rem/1 "Josefin Sans";
       }
     }
 
@@ -200,6 +222,20 @@ body {
       @import "footer";
     }
   }
+
+  .coverPink {
+    width: 100%;
+    background-color: #a20a0a;
+
+    .lineText2 {
+      transform: rotate(-2deg);
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font: bold 1rem/1 "Josefin Sans";
+    }
+  }
+
   .topBtn {
     position: fixed;
     bottom: 50px;

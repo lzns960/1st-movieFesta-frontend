@@ -87,14 +87,16 @@
       position: relative;
 
       .bro_img {
+        width: 600px;
         border-top-left-radius: 300px;
         border-top-right-radius: 200px;
         border-bottom-right-radius: 1000px;
         border-bottom-left-radius: 1000px;
       }
+
       p {
         position: absolute;
-        top: 20vh;
+        top: 40vh;
         right: -10vw;
         font-size: 80px;
       }
@@ -127,8 +129,8 @@
       }
       p {
         position: absolute;
-        top: 5vh;
-        right: -20vw;
+        top: 40vh;
+        right: 15vw;
         font-size: 80px;
       }
     }

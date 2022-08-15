@@ -327,9 +327,11 @@ body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type .ticket
 body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type .ticket_type:hover {
   border: 3px solid darkgreen;
   color: black;
-}
-body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type:hover {
   cursor: pointer;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_type .ticket_type.check {
+  border: 3px solid darkgreen;
+  color: black;
 }
 body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount {
   display: flex;
@@ -338,22 +340,25 @@ body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount {
   margin-top: 5vh;
 }
 body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount i {
-  color: darkgray;
+  color: lightgray;
 }
 body .inner .buy_ticket #modal.modal-overlay .modal-window .content_amount .tickt_amount {
   padding: 0 20px;
 }
 body .inner .buy_ticket #modal.modal-overlay .modal-window .content_button {
-  background-color: darkgreen;
+  background-color: rgba(0, 100, 0, 0.304);
   width: 300px;
   height: 50px;
   border-radius: 50px;
   color: white;
   font-size: 25px;
   line-height: 50px;
-  margin-left: 8.5vw;
-  margin-top: 5vh;
+  margin-top: 6%;
+  margin-left: 27%;
   cursor: pointer;
+}
+body .inner .buy_ticket #modal.modal-overlay .modal-window .content_button.active {
+  background-color: darkgreen;
 }
 body .inner .banner {
   text-align: center;
@@ -498,11 +503,37 @@ body .inner .cancel_page.showCancel .page {
 body .inner .cancel_page.showCancel .cancel__info {
   width: 100%;
 }
-body .inner .cancel_page.showCancel .cancel__info .cancel_notice table {
+body .inner .cancel_page.showCancel .cancel__info .buy_notice {
+  margin: 3vw 0;
+}
+body .inner .cancel_page.showCancel .cancel__info .buy_notice table {
   width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 20px;
   text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #c8c8c8;
+}
+body .inner .cancel_page.showCancel .cancel__info .buy_notice table th,
+body .inner .cancel_page.showCancel .cancel__info .buy_notice table td {
+  border: 1px solid #c8c8c8;
+  padding: 5px;
+}
+body .inner .cancel_page.showCancel .cancel__info .cancel_notice {
+  margin: 3vw 0;
+}
+body .inner .cancel_page.showCancel .cancel__info .cancel_notice table {
+  width: 100%;
+  font-size: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #c8c8c8;
+}
+body .inner .cancel_page.showCancel .cancel__info .cancel_notice table th,
+body .inner .cancel_page.showCancel .cancel__info .cancel_notice table td {
+  border: 1px solid #c8c8c8;
+  padding: 5px;
 }
 body footer {
   width: 100%;

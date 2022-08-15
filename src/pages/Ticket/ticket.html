@@ -140,9 +140,7 @@
             <h2>예매</h2>
             <span class="close-area"><i class="fa-solid fa-x"></i></span>
         </div>
-        <!-- <h2>티켓종류를 선택하세요.</h2> -->
         <p>취소/환불 규정을 반드시 확인하세요.</p>
-
         <div class="content_type">
           <div class="ticket_type sun">오전권</div>
           <div class="ticket_type night">오후권</div>
@@ -229,31 +227,55 @@
          <!-- CANCELPAGE -->
          <div class="cancel_page on">
           <div class="page cancel__info">
-            <div class="cancel_notice">
-            
+            <div class="buy_notice">
               <table>
-                <tbody>
                 <tr>
-                  <td>취소수수료</td>
+                  <th rowspan='4' style="width: 300px;">예매수수료</th>
+                  <th>장르</th>
+                  <th>PC/모바일</th>
+                  <th>전화예매</th>
+                </tr>
+                <tr>
+                  <td>콘서트,뮤지컬,클래식</td>
+                  <td>장당 1,000원</td>
+                  <td rowspan="3">장당 2,000원</td>
+                </tr>
+                <tr>
+                  <td>연극,전시</td>
+                  <td>장당 500원</td>
+                  <!-- <td></td> -->
+                </tr>
+                <tr>
+                  <td>축제, 체험, 행사</td>
+                  <td>장당 300원</td>
+                  <!-- <td></td> -->
+                </tr>
+              
+              </table>
+            </div>
+            <div class="cancel_notice">
+              <table>
+                <tr>
+                  <th rowspan='5'style="width: 300px;">취소수수료</th>
+                  <th>취소일</th>
+                  <th>취소수수료</th>
+                </tr>
+                <tr>
                   <td>관람일 9일 전 ~ 관람일 7일 전까지</td>
                   <td>티켓 금액의 10%</td>
                 </tr>
                 <tr>
-                  <td></td>
                   <td>관람일 6일 전 ~ 관람일 3일 전까지	</td>
                   <td>티켓 금액의 20%</td>
                 </tr>
                 <tr>
-                  <td></td>
                   <td>관람일 2일 전 ~ 취소마감일시까지	</td>
                   <td>티켓 금액의 30%</td>
                 </tr>
                 <tr>
-                  <td></td>
                   <td>예매 후 7일 이내</td>
                   <td>수수료없음</td>
                 </tr>
-              </tbody>
               </table>
             </div>
           </div>

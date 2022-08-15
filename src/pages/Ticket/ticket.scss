@@ -386,11 +386,13 @@ body {
               &:hover {
                 border: 3px solid darkgreen;
                 color: black;
+                cursor: pointer;
               }
             }
 
-            &:hover {
-              cursor: pointer;
+            .ticket_type.check {
+              border: 3px solid darkgreen;
+              color: black;
             }
           }
 
@@ -401,7 +403,7 @@ body {
             margin-top: 5vh;
 
             i {
-              color: darkgray;
+              color: lightgray;
             }
 
             .tickt_amount {
@@ -410,16 +412,20 @@ body {
           }
 
           .content_button {
-            background-color: darkgreen;
+            background-color: rgba(0, 100, 0, 0.304);
             width: 300px;
             height: 50px;
             border-radius: 50px;
             color: white;
             font-size: 25px;
             line-height: 50px;
-            margin-left: 8.5vw;
-            margin-top: 5vh;
+            margin-top: 6%;
+            margin-left: 27%;
             cursor: pointer;
+          }
+
+          .content_button.active {
+            background-color: darkgreen;
           }
         }
       }
@@ -602,12 +608,40 @@ body {
       .cancel__info {
         width: 100%;
 
-        .cancel_notice {
+        .buy_notice {
+          margin: 3vw 0;
           table {
             width: 100%;
-            font-size: 30px;
+            font-size: 25px;
             padding-bottom: 20px;
             text-align: center;
+            border-collapse: collapse;
+            border: 1px solid #c8c8c8;
+
+            th,
+            td {
+              border: 1px solid #c8c8c8;
+              padding: 5px;
+            }
+          }
+        }
+
+        .cancel_notice {
+          margin: 3vw 0;
+
+          table {
+            width: 100%;
+            font-size: 25px;
+            padding-bottom: 20px;
+            text-align: center;
+            border-collapse: collapse;
+            border: 1px solid #c8c8c8;
+
+            th,
+            td {
+              border: 1px solid #c8c8c8;
+              padding: 5px;
+            }
           }
         }
       }
