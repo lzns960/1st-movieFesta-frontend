@@ -79,21 +79,25 @@ body .half2 .common_header .main_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 1.8rem/1 "lalabold";
+  font: 1.8rem/1 "Ubuntu";
   cursor: pointer;
 }
 body .half2 .common_header .main_nav li {
   text-align: center;
   flex-basis: 100px;
 }
+body .half2 .common_header .main_nav a {
+  color: black;
+}
 body .half2 .common_header .main_nav li:hover {
   transform: scale(1.2);
+  font-weight: 500;
 }
 body .half2 .common_header .sub_nav {
   width: 7vw;
   display: flex;
   align-items: center;
-  font: 1.4rem/1 "lalabold";
+  font: 1.4rem/1 "Ubuntu";
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -102,7 +106,8 @@ body .half2 .common_header .sub_nav span {
   border-radius: 10px;
   padding: 0.4vw;
   padding-top: 0.6vw;
-  margin-left: 4vw;
+  margin-left: 2vw;
+  color: black;
 }
 body .half2 .common_header .sub_nav span:hover {
   background-color: #5189ad;
@@ -235,7 +240,7 @@ body .half2 .inner .img_aos {
   height: 60vh;
   margin-top: 5vw;
   display: inline-block;
-  background-image: url(../img/fireworks2.gif);
+  background-image: url(/public/images/fireworks2.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

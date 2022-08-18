@@ -132,11 +132,11 @@ body .half2 .common_header nav {
 }
 body .half2 .common_header nav .main_nav {
   width: 70%;
-  padding: 0.7vh;
+  padding: 0.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 30px/1 "HSBombaram3_Regular";
+  font: 1.8rem/1 "Ubuntu";
   cursor: pointer;
 }
 body .half2 .common_header nav .main_nav li {
@@ -147,7 +147,7 @@ body .half2 .common_header nav .main_nav li a {
   color: white;
 }
 body .half2 .common_header nav .main_nav li:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   font-weight: 500;
 }
 body .half2 .common_header nav .sub_nav {
@@ -155,7 +155,7 @@ body .half2 .common_header nav .sub_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 1.4rem/1 "Josefin Sans";
+  font: 1.4rem/1 "Ubuntu";
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -165,7 +165,7 @@ body .half2 .common_header nav .sub_nav span {
   padding: 0.4vw;
   padding-top: 0.6vw;
   color: white;
-  margin-left: 4vw;
+  margin-left: 2vw;
 }
 body .half2 .common_header nav .sub_nav span:hover {
   background-color: #a20a0a;

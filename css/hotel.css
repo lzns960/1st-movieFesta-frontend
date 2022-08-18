@@ -90,37 +90,42 @@ body .half2 .common_header nav {
 }
 body .half2 .common_header .main_nav {
   width: 70%;
-  padding: 0.7vw;
+  padding: 0.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 30px/1 "archer";
+  font: 1.8rem/1 "Ubuntu";
+  font-weight: bold;
   cursor: pointer;
 }
 body .half2 .common_header .main_nav li {
   text-align: center;
   flex-basis: 100px;
 }
+body .half2 .common_header .main_nav a {
+  color: purple;
+}
 body .half2 .common_header .main_nav li:hover {
-  font: 30px/1 "archer";
-  transform: scale(1.5);
-  font-weight: 500;
+  transform: scale(1.2);
+  font-weight: bold;
 }
 body .half2 .common_header .sub_nav {
   width: 7vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 20px/1 "archer";
+  font: 1.4rem/1 "Ubuntu";
   box-sizing: border-box;
   cursor: pointer;
 }
 body .half2 .common_header .sub_nav span {
-  border: 1px solid black;
+  border: 1px solid purple;
   border-radius: 10px;
-  padding: 0.6vw;
-  padding-top: 0.8vw;
-  margin-left: 3vw;
+  padding: 0.4vw;
+  padding-top: 0.6vw;
+  color: purple;
+  margin-left: 2vw;
+  font-weight: bold;
 }
 body .half2 .common_header .sub_nav span:hover {
   background-color: plum;
@@ -278,7 +283,7 @@ body .half2 .hotel_inner .hotelMiddle .hotelText {
   position: absolute;
   width: 100%;
   opacity: 0;
-  top: -10vw;
+  top: 4vw;
 }
 body .half2 .hotel_inner .hotelMiddle .hotelStaff {
   position: absolute;

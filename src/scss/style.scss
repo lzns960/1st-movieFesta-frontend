@@ -87,7 +87,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font: 1.8rem/1 "Josefin Sans";
+        font: 1.8rem/1 "Ubuntu";
         cursor: pointer;
 
         li {
@@ -110,7 +110,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font: 1.4rem/1 "Josefin Sans";
+        font: 1.4rem/1 "Ubuntu";
         box-sizing: border-box;
         cursor: pointer;
 
@@ -120,17 +120,12 @@ body {
           padding: 0.4vw;
           padding-top: 0.6vw;
           color: black;
-          margin-left: 4vw;
+          margin-left: 2vw;
         }
 
         span:hover {
           background-color: #47b3ac;
           transition: 1.3s;
-        }
-
-        .lang:hover {
-          text-decoration: underline;
-          font-style: italic;
         }
       }
     }

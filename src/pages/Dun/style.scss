@@ -90,17 +90,22 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font: 1.5rem/1 "dune";
+        font: 1.8rem/1 "Ubuntu";
         cursor: pointer;
 
         li {
           text-align: center;
           flex-basis: 100px;
         }
+
+        a {
+          color: black;
+        }
       }
 
       .main_nav li:hover {
         transform: scale(1.2);
+        font-weight: 500;
       }
 
       .sub_nav {
@@ -108,7 +113,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font: 0.82rem/1 "dune";
+        font: 1.4rem/1 "Ubuntu";
         box-sizing: border-box;
         cursor: pointer;
 
@@ -117,7 +122,8 @@ body {
           border-radius: 10px;
           padding: 0.4vw;
           padding-top: 0.6vw;
-          margin-left: 4vw;
+          margin-left: 2vw;
+          color: black;
         }
 
         span:hover {

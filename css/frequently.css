@@ -89,12 +89,15 @@ body .half2 .common_header .main_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 30px/1 "Josefin Sans";
+  font: 1.8rem/1 "Ubuntu";
   cursor: pointer;
 }
 body .half2 .common_header .main_nav li {
   text-align: center;
   flex-basis: 100px;
+}
+body .half2 .common_header .main_nav a {
+  color: black;
 }
 body .half2 .common_header .main_nav li:hover {
   transform: scale(1.2);
@@ -105,23 +108,21 @@ body .half2 .common_header .sub_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 20px/1 "Josefin Sans";
+  font: 1.4rem/1 "Ubuntu";
   box-sizing: border-box;
   cursor: pointer;
 }
 body .half2 .common_header .sub_nav span {
   border: 1px solid black;
   border-radius: 10px;
-  padding: 0.7vh;
-  padding-top: 1vh;
+  padding: 0.4vw;
+  padding-top: 0.6vw;
+  color: black;
+  margin-left: 2vw;
 }
 body .half2 .common_header .sub_nav span:hover {
   background-color: #9bc8f2;
   transition: 1.3s;
-}
-body .half2 .common_header .sub_nav .lang:hover {
-  text-decoration: underline;
-  font-style: italic;
 }
 body .half2 .coverPink {
   width: 100vw;

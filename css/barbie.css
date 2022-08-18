@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
@@ -20,15 +21,15 @@ a {
 /* FONT */
 @font-face {
   font-family: "soul";
-  src: url(../font/soul-handwriting_free-version.ttf) format("truetype");
+  src: url(/assets/fonts/soul-handwriting_free-version.ttf) format("truetype");
 }
 @font-face {
   font-family: "cloud";
-  src: url(../font/MCKLW___.ttf) format("truetype");
+  src: url(/assets/fonts/MCKLW___.ttf) format("truetype");
 }
 @font-face {
   font-family: "cloudBK";
-  src: url(../font/MCKLB___.ttf) format("truetype");
+  src: url(/assets/fonts/MCKLB___.ttf) format("truetype");
 }
 @font-face {
   font-family: "CookieRun-Regular";
@@ -154,16 +155,19 @@ body .half2 .common_header nav {
 }
 body .half2 .common_header .main_nav {
   width: 70%;
-  padding: 0.7vw;
+  padding: 0.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 30px/1 "ghanachoco";
+  font: 1.8rem/1 "Ubuntu";
   cursor: pointer;
 }
 body .half2 .common_header .main_nav li {
   text-align: center;
   flex-basis: 100px;
+}
+body .half2 .common_header .main_nav a {
+  color: white;
 }
 body .half2 .common_header .main_nav li:hover {
   font: 30px/1;
@@ -175,20 +179,25 @@ body .half2 .common_header .sub_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 20px/1 "ghanachoco";
+  font: 1.4rem/1 "Ubuntu";
   box-sizing: border-box;
   cursor: pointer;
 }
 body .half2 .common_header .sub_nav span {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
-  padding: 0.6vw;
-  padding-top: 0.8vw;
+  padding: 0.4vw;
+  padding-top: 0.6vw;
+  color: white;
   margin-left: 2vw;
 }
 body .half2 .common_header .sub_nav span:hover {
   background-color: #59bdf0;
   transition: 1.3s;
+}
+body .half2 .common_header .sub_nav .lang:hover {
+  text-decoration: underline;
+  font-style: italic;
 }
 body .half2 .common_header .coverGreen {
   top: 0;
