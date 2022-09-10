@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelFesta</title>
+    <!-- fontawesome -->
+    <script  src="https://kit.fontawesome.com/be47d6bb17.js" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/hotel.css">
+    <!-- js -->
+    <script defer src="./js/hotel.js"></script>
+</head>
+<body>
+    <!-- 왼쪽 페이지 -->
+    <div class="half">
+        <!-- <p>Movie Festa</p> -->
+    </div>
+    
+    <!-- 오른쪽 페이지 -->
+    <div class="half2">
+        <!-- 오른쪽 페이지 헤더 -->
+        <header class="common_header">
+            <nav>
+                <ul class="main_nav">
+                    <li>HOME</li>
+                    <li>2022</li>
+                    <li>2021</li>
+                    <li>NEWS</li>
+                </ul>
+                <ul class="sub_nav">
+                    <li><span>Ticket</span></li>
+                </ul>
+            </nav>
+            <div class="coverPurple">
+                <p class="lineText1"></p>
+            </div>
+        </header>
+
+        <!-- 오른쪽 페이지__메인 글씨 -->
+        <section class="hotel_inner">
+
+            <div class="main-view-container">
+
+                <svg class="scene" 
+                    version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="text-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1118.9 577.5">
+                        <text id="text-content" transform="translate(108.549 223.644)">
+                            <tspan class="row row-1" x="0" y="0">Grand</tspan>
+                            <tspan class="row row-2" x="0" y="320">Budapest</tspan>
+                            <tspan class="row row-3" x="0" y="640">Hotel</tspan>
+                        </text>
+                    </svg>
+                </svg>
+            </div>
+            <p data-aos="flip-up">
+                1932년 세계대전이 한창이던 어느 날, 세계 최고 부호 마담 D.가 ‘그랜드 부다페스트 호텔’에 다녀간 지 얼마 지나지 않아 의문의 살인을 당한다. <br>
+                그녀는 유언을 통해 가문 대대로 내려오던 명화 '사과를 든 소년'을 전설적인 호텔 지배인이자 연인 구스타브 앞으로 남긴다.
+                마담 D.의 유산을 노리고 있던 그의 아들 드미트리는 구스타브를 졸지에 유력한 용의자로 지목하게 되고,
+                구스타브는 충실한 호텔 로비보이 제로와 함께 누명을 벗기 위한 기상천외한 모험을 시작한다. 
+                한편, 드미트리는 그녀의 유품과 함께 그랜드 부다페스트 호텔을 차지하기 위해 무자비한 킬러 조플링를 고용하기에 이르는데…
+            </p>
+        </section>
+
+        <!-- 오른쪽 페이지__OST-->
+        <section class="hotel_inner">
+            <h2 data-aos="fade-right" data-aos-duration="800" >Music Playlist</h2>
+            <ul class="nav">
+                <li class="on">
+                    <img src="./img/hotelmusic1.jpg" alt="호텔앨범커버">
+                    <h2>01 s'Rothe-Zäuerli</h2>
+                    <p>Rudeness is merely the expression of fear.</p>
+                </li>
+                <li>
+                    <img src="./img/hotelmusic2.jpg" alt="호텔앨범커버">
+                    <h2>02 A Prayer For Madame D</h2>
+                    <p>People fear they won't get what they want.</p>
+                </li>
+                <li>
+                    <img src="./img/hotelmusic3.jpg" alt="호텔앨범커버">
+                    <h2>03 Schloss Lutz Overture</h2>
+                    <p>The most dreadful and unattractive person only needs to be loved,</p>
+                </li>
+                <li>
+                    <img src="./img/hotelmusic4.jpg" alt="호텔앨범커버">
+                    <h2>04 Night Train To Nebelsbad</h2>
+                    <p>and they will open up like a flower...</p>
+                </li>
+            </ul>
+        </section>
+
+        
+        <!-- 오른쪽 페이지__등장인물소개 -->
+        <section class="hotel_inner hotelCast">
+            <h2 data-aos="fade-left">CASTING</h2>
+            <ul>
+                <li class="castRight" data-aos="fade-right">
+                    <img src="./img/castTony.jpg" alt="등장인물Tony">
+                    <h2>ZERO</h2>
+                    <p>TONY REVOLORI</p>
+                </li>
+                <li class="castLeft" data-aos="fade-left">
+                    <h2>Dmitri</h2>
+                    <p>ADRIEN BRODY</p>
+                    <img src="./img/castAdrien.webp" alt="등장인물Adrien">
+                </li>
+                <li class="castRight" data-aos="fade-right">
+                    <img src="./img/castRalph.jpg" alt="등장인물Ralph">
+                    <h2>M.Gustave</h2>
+                    <p>RALPH FIENNES</p>
+                </li>
+                <li class="castLeft" data-aos="fade-left">
+                    <h2>Madame</h2>
+                    <p>TILDA SWINTON</p>
+                    <img src="./img/castTilda.jpg" alt="등장인물Tilda">
+                </li>
+            </ul>
+        </section>
+
+        <!-- 오른쪽 페이지__호텔입장 -->
+        <section class="hotel_inner">
+            <div class="hotelMiddle">
+                <div class="hotelStaff" ></div>
+                <img class="hotelDoor" src="./img/doorEffect.svg" alt="문그림자">
+                <img class = "hotelText" src="./img/hotelText.png" alt="더그랜드부다페스트호텔">
+            </div>
+        </section>
+
+        <!-- 마퀴텍스트 -->
+        <div class="coverPurple">
+            <p class="lineText2"></p>
+        </div>
+    </div>
+    <div class="topBtn" onclick="window.scrollTo(0,0);">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,471 @@
+/* RESET */
+@import "reset";
+
+/* FONT */
+@font-face {
+    font-family: "soul";
+    src: url(../font/soul-handwriting_free-version.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "cloud";
+    src: url(../font/MCKLW___.ttf) format("truetype");
+}
+@font-face {
+    font-family: "cloudBK";
+    src: url(../font/MCKLB___.ttf) format("truetype");
+}
+@font-face {
+    font-family: "archer";
+    src: url(../font/ArcherSemiboldPro.otf) format("truetype");
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+// font-family: 'Josefin Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+// font-family: 'Playfair Display', serif;
+
+// bg color: yellow #fce52b pink #f5b5c7 blue #59bdf0 barbiecolor #D8FD12 red #59bdf0 yellow #F9F88E
+
+body {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 235, 245) ;
+
+  /* 왼쪽 페이지 */
+  .half {
+    width: calc(50% + 1px);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-image: url(../img/hotelDayNight.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-right: 1px solid #000;
+
+    p {
+      position: absolute;
+      font: 8rem/1 "archer";
+      top: 3vw;
+      left: 7vw;
+      color:#37113ca8;
+      text-shadow: 0.2rem 0.5rem 1rem #9e6b34c5;
+    }
+  }
+
+  /* 오른쪽 페이지 */
+  .half2 {
+    position: relative;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+
+    /* 오른쪽 페이지 헤더 */
+    .common_header {
+      top: 0;
+      width: 100%;
+      height: 15vw;
+      color: #000;
+    
+      nav {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      }
+    
+      .main_nav {
+        width: 70%;
+        padding: 0.7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 30px/1 "archer";
+        cursor: pointer;
+
+        li {
+            text-align: center;
+            flex-basis: 100px;
+        }
+      }
+
+      .main_nav li:hover {
+        font: 30px/1 'archer';
+        transform: scale(1.5);
+        font-weight: 500;
+      }
+    
+      .sub_nav {
+        width: 7vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 20px/1 "archer";
+        box-sizing: border-box;
+        cursor: pointer;
+    
+        span {
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 0.6vw;
+          padding-top: 0.8vw;
+          margin-left: 3vw;
+        }
+
+        span:hover {
+          background-color: plum;
+          transition: 1.3s;
+        }
+      }
+
+      .coverPurple {
+        top: 0;
+        width: 100vw;
+        background-color: purple;
+        border: 1px solid #878787;
+
+
+        .lineText1 {
+          color:plum;
+          font: italic bold 1rem/1 "archer";
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    .hotel_inner {
+      padding: 3vw;
+
+      /* 오른쪽 페이지__메인글씨 */
+      .mainText{
+        // margin-top: 5vw;
+        // width: 100%;
+        // font: 8.5rem/1 "archer";
+        // text-align: center;
+        // letter-spacing: -0.4rem;
+        // -webkit-animation: text-flicker-out-glow 2.5s linear infinite both;
+        // animation: text-flicker-out-glow 2.5s linear infinite both;
+        // color: purple;
+        // text-transform: none;        
+      }
+      >p {
+        margin-top: -5vw;
+        margin-bottom: 7vw;
+        font: 1.2rem/1.8 'NEXON Lv1 Gothic OTF';
+        text-align: center;
+      }
+      
+      /* 오른쪽 페이지__OST */
+      h2 {
+        font: 6rem "archer";
+        padding: 3vw;
+        text-align: center;
+        color: #CC6A93;
+        text-shadow: 1px 1px 10px rgb(175, 175, 175);
+      }
+
+      .nav {
+        width: 100%;
+        height: 35vw;
+        // top: 20vw;
+        position: relative;
+        // background-color: rgba(0,0,0,0.2);
+        backdrop-filter: blur(2px);
+        margin-left: 2vw;
+
+        li {
+          position: relative;
+          width: 100%;
+          padding: 2vw;
+          margin-bottom: -4vw;
+          opacity: 0.4;
+          cursor: pointer;
+          transition: 1.4s;
+          transform-origin: left center;
+
+          &:hover {
+            transform: scale(1.2);
+            opacity: 1;
+          }
+
+          img {
+            width: 10%;
+            height: 40%;
+            position: absolute;
+            float: left;
+            border-radius: 10px;
+          }
+
+          h2 {
+            position: relative;
+            top: -3vw;
+            font: 1rem "archer";
+            display: inline-block;
+            color: #000;
+            letter-spacing: 1px;
+            margin-left: 3vw;
+
+
+            &::after {
+              content: "";
+              display: block;
+              width: 20px;
+              height: 1px;
+              background-color: #000;
+              // margin-top: 5px;
+              transition: 1.5s;
+            }
+          }
+
+          p {
+            position: relative;
+            top: -4.5vw;
+            color: #000;
+            font: 1rem 'Source Sans Pro';
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-left: 6vw;
+          }
+
+          // &.on {
+          //     background-color: linear-gradient(90deg,rgba(0,0,0,0.9),rgba(0,0,0,0));
+          //     transform: scale(1.2);
+          //     opacity: 1;
+          // }
+
+          h2::after {
+            width: 100%;
+          }
+        }
+      }
+
+      /* 오른쪽 페이지 등장인물 */
+      &.hotelCast{
+        width: 100%;
+        height: 145vw;
+
+        h2 {
+          color: #CC6A93;
+          text-shadow: 1px 1px 10px rgb(175, 175, 175);
+        }
+        ul {
+          .castRight {
+            display: flex;
+            align-items: center;
+            margin: 0 -2vw  2vw -2vw;
+
+            img {
+              width: 40%;
+              height: 30%;
+              border-radius: 5%;
+              box-shadow: 5px 5px 5px #000;
+            }
+
+            h2 {
+              font: 3rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+            }
+            p{
+              font: 1.5rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+
+            }
+          }
+
+          .castLeft {
+            display: flex;
+            align-items: center;
+            margin: 0 -1vw 2vw 0;
+
+            img {
+              width: 40%;
+              height: 30vw;
+              border-radius: 5%;
+              box-shadow: 5px 5px 5px  #000;
+            }
+            h2 {
+              font: 3rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+
+            }
+            p{
+              font: 1.5rem/1.5  "archer";
+              color: #CC6A93;
+              text-shadow: 1px 1px 10px rgb(175, 175, 175);
+              margin-right: 3vw;
+            }
+          }
+        }
+      }
+
+      /* 오른쪽 페이지 호텔입장 */
+      .hotelMiddle {
+        position: relative;
+        top: 0vw;
+        left:0;
+        width: 100%;
+        height: 45vw;
+        margin-bottom: -3vw;
+
+        .hotelText {
+          position: absolute;
+          width: 100%;
+          opacity: 0; 
+          top: 3vw;
+        }
+      
+        .hotelStaff {
+          position: absolute;
+          top: 6.1vw;
+          left:0;
+          width: 100%;
+          height: 100vw;
+          background-image: url(../img/hotelStaff.gif);
+          background-position:center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-top: -12.2vw;
+        }
+      
+        .hotelDoor {
+          position: absolute;
+          top: 11.8vw;
+          left: 0;
+          width: 120%;
+          height: 39vw;
+          margin-left:-4.7vw;
+          margin-top: 10.5vw;
+        }
+      }
+    }
+    /* 마퀴 텍스트 효과 */
+    .coverPurple {        
+      top: 0;
+      width: 100vw;
+      background-color: purple;
+      border: 1px solid #878787;
+
+
+      .lineText2 {
+        color:plum;
+        font: italic bold 1rem/1 "archer";
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00000067;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff67;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff67;
+      border: 1px solid #00000067;
+      color: black;
+    }
+  }
+}
+
+/* 메인텍스트 효과 */
+
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+$stroke-dash-max: 360;
+$easings__ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$easings__ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easings__ease-in-out: cubic-bezier(.59,.03,.27,.89);
+
+
+
+$font-family-stack: 'MoonFlower', 'Amatic SC', cursive;
+
+
+@keyframes DrawTextPath {
+    0% {
+       stroke-dasharray: 0 $stroke-dash-max;
+    }
+    100% {
+        //stroke-dasharray: $stroke-dash-max $stroke-dash-max;
+        stroke-dasharray: 100% 100%;
+    }        
+}
+
+
+
+.main-view-container {
+    width: 100%;
+    height: 50vw;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    margin-top:-15vw;
+}
+
+.text-container {
+    width: 50%;
+    
+}
+
+.text-content {
+    
+}
+
+.row {
+
+    fill: none;    
+    stroke: purple;
+    stroke-miterlimit: 10;
+    // font-family: "archer";
+    font: 15em "archer";
+    stroke-width: .0225em;
+    //letter-spacing: 15;
+    //stroke-dasharray: 0 $stroke-dash-max 0 0;
+    //stroke-dashoffset: 0;
+
+    &.drawing {
+        animation: DrawTextPath 4.1s $easings__ease-in-out;
+        animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-delay: 0.3s;
+    }
+    
+}
+
+/* hotelText 깜빡이 효과 
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink-effect 1s step-end infinite;
+}
+*/
